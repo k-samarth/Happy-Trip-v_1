@@ -1,0 +1,23 @@
+[
+    {
+        "id":1,
+        "number":"6ESS6",
+        "name": "IN6266",
+        "flightCapacity": 100,
+        "airline": "Indigo"
+    },
+    {
+        "id":2,
+        "number":"6ESS5",
+        "name": "AI6234",
+        "flightCapacity": 80,
+        "airline": "AirIndia"
+    },
+    {
+        "id":3,
+        "number":"4ESS6",
+        "name": "IN6267",
+        "flightCapacity": 40,
+        "airline": "Indigo"
+    }
+]

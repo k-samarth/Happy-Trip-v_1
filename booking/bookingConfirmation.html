@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -36,35 +37,38 @@
   </head>
   <body>
     <!-- Nav Bar -->
-    <nav class="navbar navbar-light bg-light">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">
-          <img
-            src="https://logos-download.com/wp-content/uploads/2020/06/Cleartrip_Logo.png"
-            alt=""
-            height="24"
-            class="d-inline-block align-text-top"
-          />
-        </a>
-        <div class="subsection-nav">
-          <a class="navbar-brand nav-element" href="#">
-            INR<i class="bi bi-currency-rupee"></i>
+   
+      <nav class="navbar navbar-light bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">
+            <img
+              src="https://logos-download.com/wp-content/uploads/2020/06/Cleartrip_Logo.png"
+              alt=""
+              height="24"
+              class="d-inline-block align-text-top"
+            />
           </a>
-          <a class="navbar-brand nav-element" href="#">
-            <i class="bi bi-headset"></i>&nbsp; Support
-          </a>
-          <a class="navbar-brand nav-element" href="#">
-            <i class="bi bi-person-circle"></i>&nbsp; Log in
-          </a>
+          <div class="subsection-nav">
+            <a class="navbar-brand nav-element" href="#">
+              INR<i class="bi bi-currency-rupee"></i>
+            </a>
+            <a class="navbar-brand nav-element" href="#">
+              <i class="bi bi-headset"></i>&nbsp; Support
+            </a>
+            <a class="navbar-brand nav-element" href="#">
+              <i class="bi bi-person-circle"></i>&nbsp; Log in
+            </a>
+          </div>
         </div>
-      </div>
-    </nav>
-    <hr />
+      </nav>
+ 
+   
+
 
     
-    <div class="container">
+    <div class="container" style="font-size:12px">
       <div class="row align-items-start">
-        <div class="col side">
+        <div class="col-3 side">
           <!-- Sidebar -->
 
           <div
@@ -122,29 +126,166 @@
             </div>
           </div>
         </div>
-        <div class="col">The Transaction was a </div>
-        <div class="col ads">
-          <!-- Adds -->
-          <div class="card" style="width: 18rem">
-            <img
-              class="card-img-top"
-              src="https://thumbs.dreamstime.com/b/advertising-word-cloud-business-concept-56936998.jpg"
-              alt="Card image cap"
-            />
-            <div class="card-body">
-              <h5 class="card-title">Advertisement title</h5>
-              <p class="card-text">
-                Some quick example text to build on the card title and make up
-                the bulk of the card's content.
-              </p>
-              <a href="#" class="btn btn-primary">Visit Advertiser</a>
-            </div>
+       
+        <div style="padding:10px;margin-left:50px;border:solid 3px grey;box-shadow: 10px 10px 5px lightgray;" class="col-md-8 ">
+          <h4>Thanks for booking with Cleartrip</h4>
+          <p>We have confirmed your booking and emailed you all the details.Your Trip ID 
+            is <span id="tripId"><b>12345</b></span>. Please use this in any communication with Cleartrip. 
+          </p>
+          <p style=" border-top:2px solid skyblue;border-bottom:2px solid skyblue;background-color:lightblue"><b>Note:&nbsp;</b><u><a href="#"style="color:blue"onclick="printpage()" >Print</a></u> the e-ticket and carry it along with the ID proof mentioned in the ticket when you board the flight.</p>
+          <script>
+            function printpage()
+            {
+            
+              window.print();
+            }
+          </script>
+          <div class="container">
+       
+                        
+            <table class="table">
+              <thead>
+                <tr>
+                  <th colspan="6">Mumbai to Delhi</th> 
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Transaction ID</td>
+                  <td>434562653167</td>
+                  <td>From</td>
+                  <td>Bangalore</td>
+                  <td>Airline</td>
+                  <td>AirIndia</td>
+              
+                </tr>
+                <tr>
+                  <td>Flight No & Name </td>
+                  <td>6E50/Indigo</td>
+                  <td>To</td>
+                  <td>Delhi</td>
+                  <td>Date of journey</td>
+                  <td>19 sep 2022</td>
+                </tr>
+                <tr>
+                  <td>Schedule Departure</td>
+                  <td>06:45</td>
+                  <td>Boarding Point</td>
+                  <td>bangalore</td>
+                  <td>Date of boarding</td>
+                  <td>19 Sep 2022</td>
+                </tr>
+                <tr >
+                  <td>Duration:</td>
+                  <td colspan="5">4hrs</td>
+                </tr>
+              </tbody>
+            </table>
+            <table class="table">
+              <thead>
+                <tr>
+                  <th colspan="6">Passenger details</th> 
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th>S.No.</th>
+                  <th>Name</th>
+                  <th>Age</th>
+                  <th>Gender</th>
+                  <th>Seat No</th>
+                  <th>Status</th>
+              
+                </tr>
+                <tr>
+                  <td>1</td>
+                  <td>Venkat Swaminathan</td>
+                  <td>28</td>
+                  <td>Male</td>
+                  <td>6A</td>
+                  <td>Confirmed</td>
+              
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>Bindu Swaminathan</td>
+                  <td>25</td>
+                  <td>Female</td>
+                  <td>6B</td>
+                  <td>Confirmed</td>
+              
+                </tr>
+                <tr>
+                  <td>1</td>
+                  <td>Ganesh Swaminathan</td>
+                  <td>9</td>
+                  <td>Male</td>
+                  <td>6C</td>
+                  <td>Confirmed</td>
+              
+                </tr>
+              </tbody>
+              </table>
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th colspan="6">General Information</th> 
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th rowspan="4">Price details</th>
+                    <td>Fare</td>
+                    <th>Rs.1770</th>
+                  </tr>
+                  <tr>
+                    <td>Airline service fee</td>
+                    <th>Rs.30</th>
+                    
+                  </tr>
+                  <tr>
+                    <td>Cleartrip service fee</td>
+                    <th>Rs.10</th>
+                    
+                  </tr>
+                  <tr >
+                    <td>Total you paid</td>
+                    <th>Rs. 2010</th>
+                  </tr>
+
+                  <tr>
+                    <th rowspan="5">Contact details for this trip</th>
+                    <td>Name</td>
+                    <th>Mr. John Doe</th>
+                  </tr>
+                  <tr>
+                    <td>Address</td>
+                    <th>Opera house, Mumbai</th>
+                    
+                  </tr>
+                  <tr>
+                    <td>Email</td>
+                    <th>john@gmail.com</th>
+                    
+                  </tr>
+                  <tr >
+                    <td>Tel</td>
+                    <th>04994223797</th>
+                  </tr>
+                  <tr >
+                    <td>Mobile</td>
+                    <th>9673627171</th>
+                  </tr>
+
+                </tbody>
+                
+              </table>
+          
           </div>
         </div>
+        
+        
       </div>
     </div>
-    <!-- Collect passanger info -->
-    <!-- Accept Terms and Conditions -->
-    <!-- Submit the information -->
   </body>
 </html>

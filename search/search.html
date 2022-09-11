@@ -130,7 +130,7 @@
           <br>
           <div class="direction" style="display: flex; justify-content:space-between; width: 80%;">
           <div class="form-check">
-            <input class="form-check-input arriveOn1" type="radio" name="trip" value="oneway" checked>
+            <input class="form-check-input arriveOn1" type="radio" name="trip" id="OneWay" value="oneway" checked>
             <label class="form-check-label" for="exampleRadios1">
               One Way
             </label>
@@ -152,6 +152,7 @@
               <option selected disabled>Choose From City</option>
             </select>
           </div>
+          <button id="swap" style="background-color: white;height: 30px;margin-top: 30px;"><img src="https://www.bing.com/th?id=OIP.kVDM4uoilObLkpIWlQihtQHaFL&w=298&h=209&c=8&rs=1&qlt=90&o=6&dpr=1.5&pid=3.1&rm=2" style="width: 15px;"></button>
           <div class="form-group">
             <label for="exampleFormControlInput1">To </label>
             <select class="form-select" id="toCity" aria-label="Default select example">
@@ -164,7 +165,7 @@
           <div class="form-group" style="display: flex; justify-content: space-between; width: 80%;">
             <div>
               <label for="exampleFormControlInput1">Depart on </label>
-              <input type="date" class="form-control datepicker" id="dob">
+              <input type="date" class="form-control datepicker" id="dob"  />
             </div>
             <div id="disable">
               
@@ -193,6 +194,7 @@
 
                 <select class="form-select" aria-label="Default select example">
                   <option selected disabled>Children</option>
+                  <option value="0">0</option>
                   <option value="1">1</option>
                   <option value="2">2</option>
                   <option value="3">3</option>
@@ -210,15 +212,11 @@
 
                 <select class="form-select" aria-label="Default select example">
                   <option selected disabled>Infants</option>
+                  <option value="0">0</option>
                   <option value="1">1</option>
                   <option value="2">2</option>
                   <option value="3">3</option>
-                  <option value="1">4</option>
-                  <option value="2">5</option>
-                  <option value="3">6</option>
-                  <option value="1">7</option>
-                  <option value="2">8</option>
-                  <option value="3">9</option>
+                
                 </select>
                 <h6 style="color: gray; font-size: 12px;">Below 2 Years</h6>
               </div>
@@ -236,7 +234,7 @@
             
           </div>
           <br>
-              <button type="submit" class="btn btn-primary my-1 passanger-submit">Search Flights</button>
+              <button id="search" type="submit" class="btn btn-primary my-1 passanger-submit">Search Flights</button>
               <h1 id="result"></h1>
 
               <!-- Coupons -->

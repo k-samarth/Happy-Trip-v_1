@@ -10,6 +10,41 @@
 // 4. Solution -> a. class, b. function object, c. javascript object.
 // 5. Lovely, Beautiful and Professional UI.
 // 6. Agenda, Welcome, Problem, Solution, Key highlights, best practices.
+const swapBtn = document.getElementById('swap')
+
+swapBtn.addEventListener("click", function (e) {
+
+    e.preventDefault();
+
+    var tmp = document.getElementById("fromCity").value;
+
+document.getElementById("fromCity").value = document.getElementById("toCity").value;
+
+document.getElementById("toCity").value = tmp;
+
+})
+var btn=document.getElementById('search');
+
+document.getElementById("dob").min = new Date().getFullYear() + "-" +  +"0"+parseInt(new Date().getMonth() + 1 ) + "-" + new Date().getDate();
+btn.onclick=function()
+    
+{
+
+var flag=0;
+var from=document.getElementById("fromCity");
+var to=document.getElementById("toCity");
+var oneWay=document.getElementById("OneWay");
+if(from.value==to.value)
+{
+    alert("From and to location cannot be same");
+    flag=1;
+    return;
+}
+if(!flag)
+{
+    alert("success");
+}
+}
 
 function fetchAirport()
 {
@@ -70,8 +105,10 @@ var arriveOn = document.querySelector(".arriveOn")
 arriveOn.addEventListener("click", enableArriveOn);
 function enableArriveOn()
 {
-    document.getElementById("disable").innerHTML=`<label for="exampleFormControlInput1" id="arriveOn">Arrive on </label>
-    <input type="date" class="form-control" id="dob">`;
+    document.getElementById("disable").innerHTML=`<label for="exampleFormControlInput1" id="arriveOn">Return on </label>
+    <input type="date" class="form-control" id="dob1">`;
+    document.getElementById("dob1").min = new Date().getFullYear() + "-" +  +"0"+parseInt(new Date().getMonth() + 1 ) + "-" + new Date().getDate();
+
 }
 // import {SearchInfo} from '../Models/' 
 // function Search()

@@ -32,15 +32,45 @@ btn.onclick=function()
 
 var flag=0;
 var from=document.getElementById("fromCity");
+var a=document.getElementById("Adults");
+
+var b=document.getElementById("Children");
+var c=document.getElementById("Infants");
 var to=document.getElementById("toCity");
+var dob=document.getElementById("dob");
 var oneWay=document.getElementById("OneWay");
 if(from.value==to.value)
 {
-    alert("From and to location cannot be same");
+    alert("Enter a valid city");
     flag=1;
     return;
 }
-if(!flag)
+var choice=document.getElementById("choice");
+if(choice.value=="")
+{
+    flag=1;
+    return;
+}
+var airline=document.getElementById("airline");
+if(airline.value=="" )
+{
+    flag=1;
+    return;
+}
+if(from.value==0 )
+{
+    flag=1;
+    return;
+}
+var sum=parseInt(a.value)+parseInt(b.value)+parseInt(c.value);
+
+
+console.log(sum);
+if(sum>9)
+{
+    alert("No of pass")  
+}
+if(!flag )
 {
     alert("success");
 }

@@ -167,7 +167,7 @@
           <br>
           <div class="direction" style="display: flex; justify-content:space-between; width: 80%;">
           <div class="form-check">
-            <input class="form-check-input arriveOn1" type="radio" name="trip" id="OneWay" value="oneway" checked>
+            <input class="form-check-input arriveOn1" type="radio" name="trip" id="OneWay" value="oneway" checked >
             <label class="form-check-label" for="exampleRadios1">
               One Way
             </label>
@@ -185,15 +185,16 @@
           <div class="fromTo" style="display: flex; justify-content:space-between; ">
           <div class="form-group" >
             <label for="exampleFormControlInput1">From </label>
-            <select class="form-select" id="fromCity" aria-label="Default select example">
-              <option selected disabled>Choose From City</option>
+            <select class="form-select" id="fromCity" aria-label="Default select example" required>
+              <option  value="" selected disabled>Choose From City</option>
             </select>
           </div>
           <button id="swap" style="background-color: white;height: 30px;margin-top: 30px;"><img src="https://www.bing.com/th?id=OIP.kVDM4uoilObLkpIWlQihtQHaFL&w=298&h=209&c=8&rs=1&qlt=90&o=6&dpr=1.5&pid=3.1&rm=2" style="width: 15px;"></button>
           <div class="form-group">
             <label for="exampleFormControlInput1">To </label>
-            <select class="form-select" id="toCity" aria-label="Default select example">
-              <option selected disabled>Choose To City</option>
+            <select class="form-select" id="toCity" aria-label="Default select example" required>
+            
+              <option  value="" selected disabled>Choose To City</option>
             </select>
           </div>
           
@@ -202,7 +203,7 @@
           <div class="form-group" style="display: flex; justify-content: space-between; width: 80%;">
             <div>
               <label for="exampleFormControlInput1">Depart on </label>
-              <input type="date" class="form-control datepicker" id="dob"  />
+              <input type="date" class="form-control datepicker" id="dob" required />
             </div>
             <div id="disable">
               
@@ -213,8 +214,8 @@
               <div>
             <label for="exampleFormControlInput1">Adults </label>
 
-              <select class="form-select" aria-label="Default select example">
-                <option selected disabled>Adults</option>
+              <select id="Adults" class="form-select" aria-label="Default select example" required>
+                <option  value="" selected disabled>Adults</option>
                 <option value="1">1</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
@@ -229,7 +230,7 @@
               <div>
             <label for="exampleFormControlInput1">Children </label>
 
-                <select class="form-select" aria-label="Default select example">
+                <select id="Children" class="form-select" aria-label="Default select example" required>
                   <option selected disabled>Children</option>
                   <option value="0">0</option>
                   <option value="1">1</option>
@@ -247,7 +248,7 @@
               <div>
             <label for="exampleFormControlInput1">Infants </label>
 
-                <select class="form-select" aria-label="Default select example">
+                <select id="Infants" class="form-select" aria-label="Default select example" required>
                   <option selected disabled>Infants</option>
                   <option value="0">0</option>
                   <option value="1">1</option>
@@ -261,17 +262,17 @@
             <div style="display: flex; justify-content:space-between">
             <div class="form-group">
               <label for="exampleFormControlInput1">Class of Travel </label>
-              <input type="text" class="form-control" id="name" placeholder="Please Enter Your Name">
+              <input type="text" class="form-control" id="choice" placeholder="Please Enter Your Choice" required>
             </div>
 
             <div class="form-group">
               <label for="exampleFormControlInput1">Preffered Airline </label>
-              <input type="text" class="form-control" id="name" placeholder="Please Enter Your Name">
+              <input type="text" class="form-control" id="airline" placeholder="Please Enter Your Choice" required>
             </div>
             
           </div>
           <br>
-              <button id="search" type="submit" class="btn btn-primary my-1 passanger-submit">Search Flights</button>
+              <input id="search" type="submit" class="btn btn-primary my-1 passanger-submit" value="Search Flights">
               <h1 id="result"></h1>
 
               <!-- Coupons -->

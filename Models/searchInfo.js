@@ -12,3 +12,5 @@ constructor(direction,fromCity,toCity,fromDate,toDate,adults,children,infants)
 }
 
 }
+
+export {searchInfo};

@@ -37,7 +37,56 @@ window.onload = function()
     }
 }
 
+
+
 // // name, gender, dob, mobileNumber
 
+ 
+
+var btn=document.getElementById('button');
+
+btn.onclick=function(){
+    let name=document.getElementById("name").value;
+    let gender=document.getElementById("gender").value;
+    let dob=document.getElementById("dob").value;
+    let mobileNumber=document.getElementById("mobileNumber").value;
+    var flag=0;
+    var regName = /[a-z|A-Z]+$/;
+   // let date=new Date();
+    // dob.style.max="{{this.date}}";
 
 
+if(!(name.length)>0||!regName.test(name))
+    {
+        alert("Please enter valid  name")
+        flag=1;
+        return false;
+
+    }
+
+    else if(!(gender.length)>0)
+    {
+       alert("Please enter the gender ")
+       flag=1;
+       return false;
+    }
+   else if(!(dob.length)>0)
+   {
+       alert("Please enter the DOB ")
+       flag=1;
+       return false;
+   }
+
+   else if(!(mobileNumber.length>0) || isNaN(mobileNumber))
+   {
+       alert("Please enter the valid mobile number")
+       flag=1;
+       return false;
+   }
+  
+   if(flag==0)
+   {
+       alert("success")
+   }
+
+}

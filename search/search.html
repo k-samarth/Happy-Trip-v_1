@@ -178,15 +178,15 @@
           <br>
           <div class="direction" style="display: flex; justify-content:space-between; width: 80%;">
           <div class="form-check">
-            <input onclick="document.getElementById('dob1').disabled=true; document.getElementById('roundTrip').checked=false;"class="form-check-input" type="radio" name="OneWay" id="OneWay" value="One way">
+            <input onclick="document.getElementById('dob1').disabled=true; document.getElementById('roundTrip').checked=false;"class="form-check-input arriveOn1" type="radio" name="OneWay" id="OneWay" value="One way">
             <label  class="form-check-label" for="exampleRadios1">
               One Way
             </label>
           </div>
           
-          <div class="form-check" >
-            <input onclick="document.getElementById('dob1').disabled=false; document.getElementById('OneWay').checked=false;  " class="form-check-input" type="radio" name="Round Trip" id="roundTrip" value="Round Trip">
-            <label  class="form-check-label" for="exampleRadios2">
+          <div class="form-check" > 
+          <input onclick="document.getElementById('dob1').disabled=false; document.getElementById('OneWay').checked=false;  " class="form-check-input arriveOn" type="radio" name="Round Trip" id="roundTrip" value="Round Trip">
+            <label class="form-check-label" for="exampleRadios2">
               Round Trip
             </label>
           </div>
@@ -205,10 +205,10 @@
           
         </div>
         <br>
-        <div class="fromTo" style="display: flex; justify-content:space-between; ">
-          <div class="form-group">
+     
+          <div class="form-group" style="display: flex; justify-content: space-between; width: 80%;">
+            <div>
               <label for="exampleFormControlInput1">Depart on </label>
-              <!-- <input type="text" placeholder="dd-mm-yyyy" data-format="dd-mm-yyyy" required class="form-control date"  id="dob"> -->
               <input
       type="text" id="dob" class="date form-control" data-format="dd-mm-yyyy" placeholder="dd-mm-yyyy" style="width: 200px"/>
     <script type="text/javascript">
@@ -217,7 +217,6 @@
         startDate: new Date(),
       });
     </script>
-              
             </div>
             <div id="disable">
               

@@ -42,5 +42,71 @@
     
 
 }
+<<<<<<< HEAD
+=======
+function fetchAirport()
+{
+    console.log("Fetch Airport Here");
+    fetch('../service/airports.json')
+            .then(function (response) {
+                // console.log(fetch('flight.json'));
+                return response.json();
+                
+            })
+            .then(function (data) {
+                for(let i in data.airports){
+                    var x = document.getElementById("fromCity");
+                    var option = document.createElement("option")
+                    option.text = data.airports[i].IATA_code+" : "+ data.airports[i].airport_name+", "+ data.airports[i].city_name;
+                    x.add(option);
+                }
+            })
+            .catch(function (err) {
+                console.log('error: ' + err);
+            });
+}
+fetchAirport()
+
+function fetchAirportTo()
+{
+    // console.log("Fetch Airport Here");
+    fetch('../service/airports.json')
+            .then(function (response) {
+                // console.log(fetch('flight.json'));
+                return response.json();
+                
+            })
+            .then(function (data) {
+                for(let i in data.airports){
+                    var x = document.getElementById("toCity");
+                    var option = document.createElement("option")
+                    option.text = data.airports[i].IATA_code+" : "+ data.airports[i].airport_name+", "+ data.airports[i].city_name;
+                    x.add(option);
+                }
+            })
+            .catch(function (err) {
+                console.log('error: ' + err);
+            });
+}
+fetchAirportTo()
+
+// Disable The Arrive On for Round Trip
+var arriveOn1 = document.querySelector(".arriveOn1")
+arriveOn1.addEventListener("click", disableArriveOn);
+function disableArriveOn()
+{
+    document.getElementById("disable").innerHTML="";
+}
+
+// Enable The Arrive On for One Way
+var arriveOn = document.querySelector(".arriveOn")
+arriveOn.addEventListener("click", enableArriveOn);
+function enableArriveOn()
+{
+    document.getElementById("disable").innerHTML=`<label for="exampleFormControlInput1" id="arriveOn">Arrive on </label>
+    <input type="date" class="form-control" id="dob">`;
+}
+
+>>>>>>> 44a30bedd521f5cc4ffd117ee662125cfd486797
 
 

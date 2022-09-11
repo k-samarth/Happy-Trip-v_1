@@ -42,8 +42,6 @@
     
 
 }
-<<<<<<< HEAD
-=======
 function fetchAirport()
 {
     console.log("Fetch Airport Here");
@@ -106,7 +104,5 @@ function enableArriveOn()
     document.getElementById("disable").innerHTML=`<label for="exampleFormControlInput1" id="arriveOn">Arrive on </label>
     <input type="date" class="form-control" id="dob">`;
 }
-
->>>>>>> 44a30bedd521f5cc4ffd117ee662125cfd486797
 
 

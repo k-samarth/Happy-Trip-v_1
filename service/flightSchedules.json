@@ -1,0 +1,122 @@
+[
+    {
+    "flight": "6ESS6",
+    "airline": "Indigo",
+    "date": "2022-06-03",
+    "time": "3:00 PM",
+    "duration": "30 min",
+    "seatsAvailability": "100",
+    "fromCity":"AGX",
+    "toCity":"AMD",
+    "routes":["AGX", "AMD"],
+    "price":"₹3500"
+},
+{
+    "flight": "6ESS5",
+    "airline": "AirIndia",
+    "date": "2022-09-30",
+    "time": "4:00 PM",
+    "duration": "60 min",
+    "seatsAvailability": "35",
+    "fromCity":"AJL",
+    "toCity":"AKD",
+    "routes":["AJL","AMD" ,"AKD"],
+    "price":"₹5500"
+},
+{
+    "flight": "6ESS6",
+    "airline": "Indigo",
+    "date": "2022-09-30",
+    "time": "3:00 PM",
+    "duration": "30 min",
+    "seatsAvailability": "15",
+    "fromCity":"AJL",
+    "toCity":"AKD",
+    "routes":["AJL","LKO", "IXV","AKD"],
+    "price":"₹7000"
+},
+{
+    "flight": "4ESS6",
+    "airline": "Indigo",
+    "date": "2022-09-30",
+    "time": "3:00 PM",
+    "duration": "30 min",
+    "seatsAvailability": "15",
+    "fromCity":"AKD",
+    "toCity":"AJL",
+    "routes":["AKD", "AJL"],
+    "price":"₹3700"
+},
+{
+    "flight": "66E5",
+    "airline": "Indigo",
+    "date": "2022-09-30",
+    "time": "3:00 PM",
+    "duration": "30 min",
+    "seatsAvailability": "15",
+    "fromCity":"AMD",
+    "toCity":"AKD",
+    "routes":["AMD", "AKD"],
+    "price":"₹5500"
+},
+{
+    "flight": "66E5",
+    "airline": "Indigo",
+    "date": "2022-09-30",
+    "time": "3:00 PM",
+    "duration": "30 min",
+    "seatsAvailability": "15",
+    "fromCity":"AGX",
+    "toCity":"AKD",
+    "routes":["AGX", "AKD"],
+    "price":"₹3800"
+},
+{
+    "flight": "66E5",
+    "airline": "Indigo",
+    "date": "2022-09-30",
+    "time": "3:00 PM",
+    "duration": "30 min",
+    "seatsAvailability": "15",
+    "fromCity":"AGX",
+    "toCity":"AKD",
+    "routes":["AGX", "AKD"],
+    "price":"₹2500"
+},
+{
+    "flight": "66E5",
+    "airline": "Indigo",
+    "date": "2022-09-30",
+    "time": "3:00 PM",
+    "duration": "30 min",
+    "seatsAvailability": "15",
+    "fromCity":"AGX",
+    "toCity":"AKD",
+    "routes":["AGX", "AKD"],
+    "price":"₹5000"
+},
+{
+    "flight": "66E5",
+    "airline": "Indigo",
+    "date": "2022-09-30",
+    "time": "3:00 PM",
+    "duration": "30 min",
+    "seatsAvailability": "15",
+    "fromCity":"AGX",
+    "toCity":"AKD",
+    "routes":["AGX", "AKD"],
+    "price":"₹3000"
+},
+{
+    "flight": "66E5",
+    "airline": "Indigo",
+    "date": "2022-09-30",
+    "time": "3:00 PM",
+    "duration": "30 min",
+    "seatsAvailability": "15",
+    "fromCity":"AGX",
+    "toCity":"AKD",
+    "routes":["AGX", "AKD"],
+    "price":"₹4500"
+}
+]

@@ -1,6 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.0/axios.min.js"></script>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -34,6 +41,7 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"
     />
     <link rel="stylesheet" href="../style/happytrip-styles.css" />
+    <script type="module" src="/search/searchData.js"></script>
     <script type="module" src="/search/search.js"></script>
     <!-- <script type="module" src="../Models/master.js"></script> -->
     <title>Document</title>
@@ -161,7 +169,7 @@
           </div>
         </div>
         <!-- Form for Search -->
-        <form class="col-4 box-shadow" onsubmit=""  style="margin-left:9%; width: 35rem">
+        <form class="col-4 box-shadow" onsubmit=""  style="margin-left:9%; width: 35rem" action="../search/searchresults.html">
           <h3 >Search Flights</h3>
           <h5 style="color: gray">Fly anywhere. Fly everywhere.</h5>
           <br>
@@ -193,7 +201,6 @@
           <div class="form-group">
             <label for="exampleFormControlInput1">To </label>
             <select class="form-select" id="toCity" aria-label="Default select example" required>
-            
               <option  value="" selected disabled>Choose To City</option>
             </select>
           </div>
@@ -202,7 +209,7 @@
         <br>
           <div class="form-group" style="display: flex; justify-content: space-between; width: 80%;">
             <div>
-              <label for="exampleFormControlInput1">Depart on </label>
+              <label for="exampleFormControlInput1" id="fromDate">Depart on </label>
               <input type="date" class="form-control datepicker" id="dob" required />
             </div>
             <div id="disable">
@@ -215,33 +222,33 @@
             <label for="exampleFormControlInput1">Adults </label>
 
               <select id="Adults" class="form-select" aria-label="Default select example" required>
-                <option  value="" selected disabled>Adults</option>
+                <!-- <option  value="" selected disabled>Adults</option> -->
                 <option value="1">1</option>
                 <option value="2">2</option>
                 <option value="3">3</option>
-                <option value="1">4</option>
-                <option value="2">5</option>
-                <option value="3">6</option>
-                <option value="1">7</option>
-                <option value="2">8</option>
-                <option value="3">9</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
               </select>
             </div>
               <div>
             <label for="exampleFormControlInput1">Children </label>
 
                 <select id="Children" class="form-select" aria-label="Default select example" required>
-                  <option selected disabled>Children</option>
+                  <!-- <option selected disabled>Children</option> -->
                   <option value="0">0</option>
                   <option value="1">1</option>
                   <option value="2">2</option>
                   <option value="3">3</option>
-                  <option value="1">4</option>
-                  <option value="2">5</option>
-                  <option value="3">6</option>
-                  <option value="1">7</option>
-                  <option value="2">8</option>
-                  <option value="3">9</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
                 </select>
                 <h6 style="color: gray; font-size: 12px;">2-11 Years</h6>
               </div>
@@ -249,7 +256,7 @@
             <label for="exampleFormControlInput1">Infants </label>
 
                 <select id="Infants" class="form-select" aria-label="Default select example" required>
-                  <option selected disabled>Infants</option>
+                  <!-- <option selected disabled>Infants</option> -->
                   <option value="0">0</option>
                   <option value="1">1</option>
                   <option value="2">2</option>
@@ -262,7 +269,13 @@
             <div style="display: flex; justify-content:space-between">
             <div class="form-group">
               <label for="exampleFormControlInput1">Class of Travel </label>
-              <input type="text" class="form-control" id="choice" placeholder="Please Enter Your Choice" required>
+              <select id="Class" class="form-select" aria-label="Default select example" required>
+                <option selected value="Any">Any</option>
+                <option value="B-Class">Business Class</option>
+                <option value="E-Class">Economy Class</option>
+                <option value="F-Class">First Class</option>
+                <option value="PE-Class">Premium Economy Class</option>
+              </select>
             </div>
 
             <div class="form-group">

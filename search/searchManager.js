@@ -1,11 +1,33 @@
-function SearchManager()
+import {searchInfo} from "../Models/searchInfo.js";
+import {searchForFlight} from "../service/searchService.js";
+import {FlightSchedule} from "../Models/master.js";
+// var searchinfo1 = new searchInfo(
+//     direction,
+//     fromCity,
+//     toCity,
+//     fromDate,
+//     toDate,
+//     adults,
+//     children,
+//     infants
+// );
+function SearchManager(searchInfo1)
 {
-    this.search = function(searchInfo)
-    {
+        console.log("Search Manager");
         // 7. Perform Validation
+        console.log(searchInfo1);
         // 8. Import SearchService 
         // 9. Call SearchService -> Search for Flights Service
-        // 17. Store Flight Schedules with Manager
-        // 18. Send sucess response to Controller
+        searchForFlight(searchInfo1);
+        
+    };
+    // 17. Store Flight Schedules with Manager
+    // 18. Send sucess response to Controller
+    var Schedules = new FlightSchedule();
+    function storeSchedule(schedule)
+    {
+        Schedules.push(schedule);
     }
-}
+
+export {SearchManager};
+export {storeSchedule};

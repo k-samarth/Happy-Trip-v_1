@@ -53,7 +53,18 @@ btn.onclick=function(){
     var flag=0;
     var regName = /[a-z|A-Z]+$/;
 
+    var checker=document.getElementById("tca");
+   
 
+    console.log(name.length)
+    if (!form.tca.checked || name.length > 0) {
+        alert("Please Indicate That You Accept The Terms And Conditions");
+        form.tca.focus();
+        flag=1;
+        return false;
+    }
+   
+    
     
 if(!(name.length)>0||!regName.test(name))
     {
@@ -89,4 +100,3 @@ if(!(name.length)>0||!regName.test(name))
    }
 
 }
-

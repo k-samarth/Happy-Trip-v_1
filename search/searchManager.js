@@ -1,6 +1,7 @@
 import {searchInfo} from "../Models/searchInfo.js";
 import {searchForFlight} from "../service/searchService.js";
 import {FlightSchedule} from "../Models/master.js";
+import { displaySchedules } from "./searchresults.js";
 // var searchinfo1 = new searchInfo(
 //     direction,
 //     fromCity,
@@ -23,10 +24,13 @@ function SearchManager(searchInfo1)
     };
     // 17. Store Flight Schedules with Manager
     // 18. Send sucess response to Controller
-    var Schedules = new FlightSchedule();
-    function storeSchedule(schedule)
+    var Schedules = [];
+    function storeSchedule(schedule=[])
     {
-        Schedules.push(schedule);
+        Schedules=schedule;
+        console.log(Schedules);
+        displaySchedules(Schedules);
+        return false;
     }
 
 export {SearchManager};

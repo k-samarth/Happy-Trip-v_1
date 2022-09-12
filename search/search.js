@@ -181,10 +181,11 @@ function getOption() {
     console.log(total);
     if(total>=10)
     {
+        console.log(total);
         alert("You can only book maximum 9 ticket at once!!")
         return true;
     }
-    if(output1<output3 || output3==0)
+    if(output1<output3)
     {
         alert("You can only book maximum 9 ticket at once!!")
         return true;

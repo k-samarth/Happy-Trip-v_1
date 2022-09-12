@@ -209,7 +209,7 @@
                 &nbsp;
             </div>
             
-            <form class="col-5 box-shadow" onsubmit="" >
+            <form class="col-5 box-shadow" action="../booking/bookingConfirmation.html" >
         <h3 style="text-align: center;">Passanger Information</h3>
         <div class="form-group">
           <label for="exampleFormControlInput1">Name: </label>
@@ -248,7 +248,7 @@
             <input type="number" class="form-control" id="mobileNumber" placeholder="Please Enter Your Name">
           </div>
           <br>
-            <input class="form-check-input" type="checkbox" value="" id="tca">
+            <input class="form-check-input" type="checkbox" value="" id="tca" required>
             <label class="form-check-label" for="defaultCheck1">
               I Agree to <a href="#">Terms and Conditions</a>
             </label>
@@ -264,19 +264,7 @@
     <script type="module" src="../Models/master.js">
 // import {Passanger} from "../Models/master.js";
 
-    function checkForm(form) {
-    var name = document.getElementById("name").value;
-    var gender = document.getElementById("gender").value;
-    var dob = document.getElementById("dob").value;
-    var mobileNumber = document.getElementById("mobileNumber").value;
-    console.log(name.length)
-    if (!form.tca.checked || name.length > 0) {
-        alert("Please Indicate That You Accept The Terms And Conditions");
-        form.tca.focus();
-        return false;
-    }
-    return false;
-    }
+    
     function PassangerInfo()
 {
     var radios = document.getElementsByName('gender');

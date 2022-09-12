@@ -33,6 +33,7 @@ var searchinfo1 = new searchInfo(
     infants
 );
 console.log(searchinfo1);
+window.localStorage.setItem("searchData", JSON.stringify(searchinfo1));
 
 SearchManager(searchinfo1);
 }

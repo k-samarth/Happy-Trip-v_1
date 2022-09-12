@@ -1,6 +1,6 @@
 import {searchInfo} from '../Models/searchInfo.js';
 import { SearchManager } from './searchmanager.js';
-//accessing search control
+
 var event = document.getElementById("search");
 
 event.addEventListener("click",displayData)

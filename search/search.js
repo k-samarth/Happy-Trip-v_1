@@ -10,6 +10,50 @@
 // 4. Solution -> a. class, b. function object, c. javascript object.
 // 5. Lovely, Beautiful and Professional UI.
 // 6. Agenda, Welcome, Problem, Solution, Key highlights, best practices.
+
+//Configuaration for search
+var OneWayDefaultDirection =true;
+var noOfAdults =9;
+var noOfChildren=9;
+var noOfInfants=5;
+//Initializing Search
+function init()
+{
+    //1.Have oneway preselected
+    setDefautValueForTravelDirection(OneWayDefaultDirection);
+
+    //2.Get cities
+loadCities();
+    //3.Get no of adults
+
+    //4.Get no of children
+
+    //5.Get no of infants
+
+    //6.Get flight class
+
+    //7.Get airline for preference
+
+    //8.disbale before todays date
+
+    //9.enable date range criteria for search
+
+    //10.
+}
+//Set default value for travel direction
+function setDefautValueForTravelDirection(defaultValue)
+{
+    //Access the radio button and make it checked 
+
+}
+function loadCities(){
+
+}
+
+
+
+
+
 const swapBtn = document.getElementById('swap')
 
 swapBtn.addEventListener("click", function (e) {

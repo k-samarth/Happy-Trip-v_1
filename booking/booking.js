@@ -61,6 +61,7 @@ btn.onclick=function(){
         alert("Please Indicate That You Accept The Terms And Conditions");
         form.tca.focus();
         flag=1;
+        
         return false;
     }
    

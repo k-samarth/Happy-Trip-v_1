@@ -2,16 +2,7 @@ import {searchInfo} from "../Models/searchInfo.js";
 import {searchForFlight} from "../service/searchService.js";
 import {FlightSchedule} from "../Models/master.js";
 import { displaySchedules } from "./searchresults.js";
-// var searchinfo1 = new searchInfo(
-//     direction,
-//     fromCity,
-//     toCity,
-//     fromDate,
-//     toDate,
-//     adults,
-//     children,
-//     infants
-// );
+
 function SearchManager(searchInfo1)
 {
         console.log("Search Manager");

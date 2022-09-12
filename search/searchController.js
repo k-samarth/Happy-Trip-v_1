@@ -3,6 +3,8 @@
 // 2. Attach Function Dynamically to Button Object
 // 3. Event Listners
 
+import { SearchManager } from "./searchmanager";
+
 // Deliverable
 // 1. It should Run.
 // 2. Code with Comments.
@@ -10,6 +12,62 @@
 // 4. Solution -> a. class, b. function object, c. javascript object.
 // 5. Lovely, Beautiful and Professional UI.
 // 6. Agenda, Welcome, Problem, Solution, Key highlights, best practices.
+
+// Configuration for Search
+var oneWayDefaultDirection = true;
+var numberOfAdults = 9;
+var numberOfChildren = 9;
+var numberOfInfants = 5;
+var searchManager = new SearchManager();
+
+// Initializing Search
+function init(){
+    // 1. Have one way preselected
+    setDefaultValueTravelDirection(oneWayDefaultDirection);
+
+    // 2. Load Cities
+    loadCities();
+
+    // 3. Get Number of Adults
+
+    // 4. Get Number of Children
+
+    // 5. Get Number of Infants
+
+    // 6. Get Flight Class
+
+    // 7. Get Airlines for preference
+
+    // 8. Enable date range and criteria for search
+};
+// Set default value for travel direction
+function setDefaultValueTravelDirection(defaultValue){
+    // Access the radio button control and make it checked
+}
+
+// To Load Cities from the Database in the control for user to select
+function loadCities(){
+    // 1. Get Cities
+    var cities = getCities();
+
+    // 2. Load Cities inside Control
+    assignCities(cities);
+}
+
+// Get Cities
+function getCities(){
+    // Get Cities from the Manager
+    return searchManager.getCities();
+}
+
+// 
+function assignCities(cities){
+    // Take the array and construct the dropdown
+    
+}
+
+
+
 const swapBtn = document.getElementById('swap')
 
 swapBtn.addEventListener("click", function (e) {

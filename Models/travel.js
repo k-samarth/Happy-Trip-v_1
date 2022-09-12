@@ -16,3 +16,4 @@ class Route
     }
 }
 
+export {City}

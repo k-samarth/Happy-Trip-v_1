@@ -1,3 +1,13 @@
+// Configuration for Search
+// Load from Local Storage
+
+
+// Initializing Search
+function init(){
+
+}
+
+
 // import { fetchSchedules } from "../service/searchService";
 var objs = [];
 // var obj = fetchSchedules()

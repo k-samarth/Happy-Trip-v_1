@@ -213,12 +213,12 @@
         <h3 style="text-align: center;">Passanger Information</h3>
         <div class="form-group">
           <label for="exampleFormControlInput1">Name: </label>
-          <input type="text" class="form-control" id="name" placeholder="Please Enter Your Name">
+          <input type="text" class="form-control" id="name" placeholder="Please Enter Your Name" required>
         </div>
         <br>
         <label for="exampleFormControlInput1">Gender: </label>
         <div class="form-check">
-            <input class="form-check-input" type="radio" name="gender" id="gender" value="Male">
+            <input class="form-check-input" type="radio" name="gender" id="gender" value="Male" required>
             <label class="form-check-label" for="exampleRadios1">
               Male
             </label>
@@ -240,12 +240,12 @@
           <br>
           <div class="form-group">
             <label for="exampleFormControlInput1">Date of Birth: </label>
-            <input type="date" class="form-control" id="dob">
+            <input type="date" class="form-control" id="dob" required>
           </div>
           <br>
           <div class="form-group">
             <label for="exampleFormControlInput1">Mobile Number: </label>
-            <input type="number" class="form-control" id="mobileNumber" placeholder="Please Enter Your Name">
+            <input type="number" class="form-control" id="mobileNumber" minlength="10" maxlength="10" placeholder="Please Enter Your Name" pattern="[0-9]{10}" required>
           </div>
           <br>
             <input class="form-check-input" type="checkbox" value="" id="tca" required>

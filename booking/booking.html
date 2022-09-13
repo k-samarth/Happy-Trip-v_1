@@ -106,67 +106,8 @@
     </nav>
     <hr />
 
-    <div class="container">
-      <div class="row align-items-start">
-        <div class="col-3 side">
-          <!-- Sidebar -->
-
-          <div
-            id="sidebarMenu"
-            class="collapse d-lg-block sidebar collapse bg-white"
-          >
-            <div class="position-sticky">
-              <div class="list-group list-group-flush mx-3 mt-4">
-                <a
-                  href="booking.html"
-                  class="list-group-item list-group-item-action py-2 ripple active"
-                  aria-current="true"
-                >
-                  <i class="bi bi-airplane"></i>&nbsp;<span>Flights</span
-                  ><i class="bi bi-chevron-right" style="float: right"></i>
-                </a>
-                <a
-                  href="../search/search.html"
-                  class="list-group-item list-group-item-action py-2 ripple"
-                >
-                  <i class="bi bi-house"></i>&nbsp;<span>Hotels</span
-                  ><i class="bi bi-chevron-right" style="float: right"></i>
-                </a>
-                <a
-                  href="#"
-                  class="list-group-item list-group-item-action py-2 ripple"
-                  ><i class="bi bi-star-fill"></i>&nbsp;<span
-                    >Cleartrip for Work</span
-                  ></a
-                >
-                <a
-                  href="#"
-                  class="list-group-item list-group-item-action py-2 ripple"
-                  ><i class="bi bi-percent"></i>&nbsp;<span>Top Offers</span></a
-                >
-                <a
-                  href="#"
-                  class="list-group-item list-group-item-action py-2 ripple"
-                >
-                  <i class="bi bi-gift-fill"></i>&nbsp;<span>Gift Cards</span>
-                </a>
-                <a
-                  href="#"
-                  class="list-group-item list-group-item-action py-2 ripple"
-                  ><i class="bi bi-headset"></i>&nbsp;<span>Support</span></a
-                >
-                <a
-                  href="#"
-                  class="list-group-item list-group-item-action py-2 ripple"
-                  ><i class="bi bi-briefcase-fill"></i>&nbsp;<span
-                    >Manage Trips</span
-                  ></a
-                >
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-6">
+    <div style="margin-left:10px;display: flex;">
+        <div >
           <section class="container tickets">
             <h1>Flight Schedule</h1>
               <div class="row">
@@ -219,35 +160,14 @@
               </div>
                 </section>
          </div>
-          <!-- Adds -->
-          <div class="card" style="margin-top:20px;margin-left: 75px;width: 15rem">
-            <img 
-              class="card-img-top" 
-              src="https://thumbs.dreamstime.com/b/advertising-word-cloud-business-concept-56936998.jpg"
-              alt="Card image cap"
-            />
-            <div class="card-body">
-              <h5 class="card-title">Advertisement title</h5>
-              <p class="card-text">
-                Some quick example text to build on the card title and make up
-                the bulk of the card's content.
-              </p>
-              <a href="#" class="btn btn-primary">Visit Advertiser</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div> 
-    <br>
-    <hr/>
-    
-      <div class="container">
+         
        
-       <center> <a href="#demo"  style="text-decoration: none;font-size:25px;color:blueviolet" data-toggle="collapse">Add traveller details <i style="margin-left:0px"class="bi bi-airplane"></i></a></center>
-      <br>
-       <hr/>
-        <div style="width:1200px;margin-left:300px" id="demo" class="collapse">
-          <form class="col-5 box-shadow"  >
+   
+    
+      <div style="height:400px;margin-top: 8px;" class="container">
+       
+      
+          <form class=" box-shadow"  action="../booking/bookingConfirmation.html">
             <h3 style="text-align: center;">Passenger Information</h3>
             <div class="form-group">
               <label for="exampleFormControlInput1">Name: </label>
@@ -286,59 +206,23 @@
                 <input type="number" class="form-control" id="mobileNumber" placeholder="Please Enter Your Name" required>
               </div>
               <br>
+              <div style="margin-left: 30px">
                 <input class="form-check-input" type="checkbox" value="" id="tca" required>
                 <label class="form-check-label" for="defaultCheck1">
                   I Agree to <a href="#">Terms and Conditions</a>
                 </label>
                 <br><br>
-               
+               </div>
                  <button id="bookNow" class="btn btn-primary my-1 passanger-submit">Book Ticket</button> 
                  </form>
                  </div>
                  </div>
                  
-                 <!-- <div class="w3-container">
-                  <button onclick="document.getElementById('bookNow').style.display='block'" class="btn btn-primary my-1 passanger-submit">Book Ticket</button>
-                  <div id="bookNow" class="w3-modal">
-                  <div class="w3-modal-content">
-                  <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-display-topright">&times;</span>
-                    <div >
-                      <div style="background-color: rgb(253, 96, 39); padding-top:100px;height:300px;margin-right: 60px;color: white; font-size: 16px;">
-                      <div style="margin-left:50px; margin-top: 30px;">
-                      <center><h2>Thank You for Booking with Us!</h2></center><br>
-                    
-                      </div>
-                      </div> 
-                      
-                      </div>
-                      </div>
-                    </div>
-                  </div> -->
-                 
-                <!-- Login in form begining -->
-         
-        <!-- login form end -->
-      <br>
-                  
-      
-    <!-- Collect passanger info -->
-    
-    <!-- name, gender, dob, mobileNumber -->
-    
-    
-    <!--<div class="container" >
-        <div class="row align-items-start">
-            <div class="col-3">
-                &nbsp;
-            </div>
-            <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo">Simple collapsible</button>
-            <div id="demo" class="collapse">
-            -->
-
+                
             
             
   
-  </hr>
+  
     
     <!-- Accept Terms and Conditions -->
     <!-- Submit the information -->

@@ -75,12 +75,57 @@ class FlightSchedule {
 }
 
 class Passanger {
-  constructor(name, gender, dob, mobileNumber) {
+  constructor(s_no,name, age,gender,seat_no,status) {
+    this.s_no=s_no;
     this.name = name;
+    this.age=age;
     this.gender = gender;
-    this.dob = dob;
-    this.mobileNumber = mobileNumber;
+    this.seat_no=seat_no;
+    this.status = status;
+    
   }
+}
+class Booking_details{
+  constructor(
+    Transaction_id,
+    From ,
+    Airline,
+    FlightNoAndName,
+    To,
+    Date,
+    Schedule,
+    BoardingPoint,
+    DateofBoarding,
+    Duration
+  ) {
+    this.Transaction_id=Transaction_id;
+    this.From=From;
+    this.Airline=Airline;
+    this.FlightNoAndName=FlightNoAndName;
+    this.To=To;
+    this.Date=Date;
+    this.Schedule=Schedule;
+    this.BoardingPoint=BoardingPoint;
+    this.DateofBoarding=DateofBoarding;
+    this.Duration=Duration;
+  }
+}
+
+class PriceDetails{
+  constructor(
+    Fare,
+    AirlineFee,
+    Cleartrip_fee,
+    Total
+    
+  ) {
+    this.Fare=Fare;
+    this.AirlineFee=AirlineFee;
+    this.Cleartrip_fee=Cleartrip_fee;
+    this.Total=this.Fare+this.AirlineFee+this.Cleartrip_fee;
+    
+  }
+
 }
 
 class Booking {
@@ -150,3 +195,5 @@ console.log(flight.airline);
 // Exports
 export {FlightSchedule};
 export {Passanger};
+export {Booking_details};
+export {PriceDetails};

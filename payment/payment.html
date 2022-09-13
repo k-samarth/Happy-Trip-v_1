@@ -1,0 +1,240 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <title>Snippet - BBBootstrap</title>
+    <link href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css' rel='stylesheet'>
+    <link href='https://use.fontawesome.com/releases/v5.8.1/css/all.css' rel='stylesheet'>
+    <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+    <style>
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        /* Track */
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+
+        /* Handle */
+        ::-webkit-scrollbar-thumb {
+            background: #888;
+        }
+
+        /* Handle on hover */
+        ::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+
+        body {
+            background: #f5f5f5
+        }
+
+        .rounded {
+            border-radius: 1rem
+        }
+
+        .nav-pills .nav-link {
+            color: #555
+        }
+
+        .nav-pills .nav-link.active {
+            color: white
+        }
+
+        input[type="radio"] {
+            margin-right: 5px
+        }
+
+        .bold {
+            font-weight: bold
+        }
+    </style>
+</head>
+
+<body className='snippet-body'>
+    <nav class="navbar navbar-light bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">
+            <img
+              src="https://www.travelbizmonitor.com/wp-content/uploads/2022/09/Cleartrip-New-Logo.png"
+              alt=""
+              height="24"
+              class="d-inline-block align-text-top"
+            />
+          </a>
+          <div class="subsection-nav">
+            <a class="navbar-brand nav-element" href="#">
+              INR<i class="bi bi-currency-rupee"></i>
+            </a>
+            <a class="navbar-brand nav-element" href="#">
+              <i class="bi bi-headset"></i>&nbsp; Support
+            </a>
+            <!-- Login in form begining -->
+            <div class="w3-container">
+              <button onclick="document.getElementById('id01').style.display='block'" class="btn btn-primary">Login/Signup</button>
+              <div id="id01" class="w3-modal">
+              <div class="w3-modal-content">
+              <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+                <div style="display:flex; ">
+                  <div style="background-color: rgb(253, 96, 39); margin-right: 60px;color: white; font-size: 16px;">
+                  <div style="margin-left:50px; margin-top: 30px;">
+                  <h2>Sign up / log in to get <br> the best of Cleartrip</h2><br>
+                  <div style="display:flex; justify-content: space-between; width: 85%;"><div> <i class="bi bi-wallet" style="margin-right: 15px; "></i></div> <div> Earn 200 in your Cleartrip wallet on new user sign up</div></div><br>
+                  <div style="display:flex; justify-content: space-between; width: 85%;"><div><i class="bi bi-percent" style="margin-right: 15px; "> </i></div> <div>Get 12 off upto 1200 on first flight booking using CTFIRST coupon code</div></div><br>
+                  <div style="display:flex; justify-content: space-between; width: 85%;"><div><i class="bi bi-cash-coin" style="margin-right: 15px; "> </i></div> <div>Earn & redeem Flipkart supercions on flight bookings</div></div><br>
+                  </div>
+                  </div> 
+                  <div style=" margin-left: -30px; padding: 10px 80px 50px 50px;">
+                  <h3 style="margin-left:110px; margin-top:30px;">Login</h3> <br>
+                  <form action="../booking/bookingConfirmation.html">
+                  <div class="form-group">
+                    <label for="uname"><b>Username</b></label>
+                    <input class="form-control"; type="text" placeholder="Enter Username" name="uname" required><br>
+                  </div>
+                  <div class="form-group">
+                    <label for="psw"><b>Password</b></label>
+                    <input  class="form-control"; type="password" placeholder="Enter Password" name="psw" required><br>
+                  </div>
+                  <button type="submit" class="btn btn-primary my-1 passanger-submit">Book Ticket</button>
+                  <input class="form-check-input" type="checkbox" value="" id="tca">
+                  <label class="form-check-label" for="defaultCheck1">Remember Me
+                  <span class="psw" style="margin-left: 50px;"><a href="#">Forgot password?</a></span></label><br><br><br>
+                  <span class="psw" style="margin-left: 25px;"><a href="#">Don't have an account? Sign up here</a></span>
+                  </form>
+                  </div>
+                  </div>
+                  </div>
+                </div>
+              </div>
+          <!-- login form end -->
+          </div>
+        </div>
+      </nav>
+      <hr />
+    <div class="container py-5">
+        <!-- For demo purpose -->
+        <div class="row mb-4">
+            <div class="col-lg-8 mx-auto text-center">
+                <h1 class="display-6">Bootstrap Payment Forms</h1>
+            </div>
+        </div> <!-- End -->
+        <div class="row">
+            <div class="col-lg-6 mx-auto">
+                <div class="card ">
+                    <div class="card-header">
+                        <div class="bg-white shadow-sm pt-4 pl-2 pr-2 pb-2">
+                            <!-- Credit card form tabs -->
+                            <ul role="tablist" class="nav bg-light nav-pills rounded nav-fill mb-3">
+                                <li class="nav-item"> <a data-toggle="pill" href="#credit-card"
+                                        class="nav-link active "> <i class="fas fa-credit-card mr-2"></i> Credit Card
+                                    </a> </li>
+                                <li class="nav-item"> <a data-toggle="pill" href="#paypal" class="nav-link "> <i
+                                            class="fab fa-paypal mr-2"></i> Paypal </a> </li>
+                                <li class="nav-item"> <a data-toggle="pill" href="#net-banking" class="nav-link "> <i
+                                            class="fas fa-mobile-alt mr-2"></i> Net Banking </a> </li>
+                            </ul>
+                        </div> <!-- End -->
+                        <!-- Credit card form content -->
+                        <div class="tab-content">
+                            <!-- credit card info-->
+                            <div id="credit-card" class="tab-pane fade show active pt-3">
+                                <form action="../booking/bookingConfirmation.html" role="form" onsubmit="event.preventDefault()">
+                                    <div class="form-group"> <label for="username">
+                                            <h6>Card Owner</h6>
+                                        </label> <input type="text" name="username" placeholder="Card Owner Name"
+                                            required class="form-control "> </div>
+                                    <div class="form-group"> <label for="cardNumber">
+                                            <h6>Card number</h6>
+                                        </label>
+                                        <div class="input-group"> <input type="text" name="cardNumber"
+                                                placeholder="Valid card number" class="form-control " required>
+                                            <div class="input-group-append"> <span class="input-group-text text-muted">
+                                                    <i class="fab fa-cc-visa mx-1"></i> <i
+                                                        class="fab fa-cc-mastercard mx-1"></i> <i
+                                                        class="fab fa-cc-amex mx-1"></i> </span> </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-sm-8">
+                                            <div class="form-group"> <label><span class="hidden-xs">
+                                                        <h6>Expiration Date</h6>
+                                                    </span></label>
+                                                <div class="input-group"> <input type="number" placeholder="MM" name=""
+                                                        class="form-control" required> <input type="number"
+                                                        placeholder="YY" name="" class="form-control" required> </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-4">
+                                            <div class="form-group mb-4"> <label data-toggle="tooltip"
+                                                    title="Three digit CV code on the back of your card">
+                                                    <h6>CVV <i class="fa fa-question-circle d-inline"></i></h6>
+                                                </label> <input type="text" required class="form-control"> </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-footer"> <button type="button"
+                                            class="subscribe btn btn-primary btn-block shadow-sm"> Confirm Payment
+                                        </button>
+                                </form>
+                            </div>
+                        </div> <!-- End -->
+                        <!-- Paypal info -->
+                        <div id="paypal" class="tab-pane fade pt-3">
+                            <h6 class="pb-2">Select your paypal account type</h6>
+                            <div class="form-group "> <label class="radio-inline"> <input type="radio" name="optradio"
+                                        checked> Domestic </label> <label class="radio-inline"> <input type="radio"
+                                        name="optradio" class="ml-5">International </label></div>
+                            <p> <button type="button" class="btn btn-primary "><i class="fab fa-paypal mr-2"></i> Log
+                                    into my Paypal</button> </p>
+                            <p class="text-muted"> Note: After clicking on the button, you will be directed to a secure
+                                gateway for payment. After completing the payment process, you will be redirected back
+                                to the website to view details of your order. </p>
+                        </div> <!-- End -->
+                        <!-- bank transfer info -->
+                        <div id="net-banking" class="tab-pane fade pt-3">
+                            <div class="form-group "> <label for="Select Your Bank">
+                                    <h6>Select your Bank</h6>
+                                </label> <select class="form-control" id="ccmonth">
+                                    <option value="" selected disabled>--Please select your Bank--</option>
+                                    <option>Bank 1</option>
+                                    <option>Bank 2</option>
+                                    <option>Bank 3</option>
+                                    <option>Bank 4</option>
+                                    <option>Bank 5</option>
+                                    <option>Bank 6</option>
+                                    <option>Bank 7</option>
+                                    <option>Bank 8</option>
+                                    <option>Bank 9</option>
+                                    <option>Bank 10</option>
+                                </select> </div>
+                            <div class="form-group">
+                                <p> <button type="button" class="btn btn-primary "><i
+                                            class="fas fa-mobile-alt mr-2"></i> Proceed Payment</button> </p>
+                            </div>
+                            <p class="text-muted">Note: After clicking on the button, you will be directed to a secure
+                                gateway for payment. After completing the payment process, you will be redirected back
+                                to the website to view details of your order. </p>
+                        </div> <!-- End -->
+                        <!-- End -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script type='text/javascript'
+            src='https://stackpath.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.bundle.min.js'></script>
+        <script type='text/javascript' src='#'></script>
+        <script type='text/javascript' src='#'></script>
+        <script type='text/javascript' src='#'></script>
+        <script type='text/javascript'>$(function () {
+                $('[data-toggle="tooltip"]').tooltip()
+            })</script>
+        <script type='text/javascript'>var myLink = document.querySelector('a[href="#"]');
+            myLink.addEventListener('click', function (e) {
+                e.preventDefault();
+            });</script>
+
+</body>
+
+</html>

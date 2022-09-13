@@ -148,5 +148,6 @@ console.log(flight.airline);
 
 
 // Exports
+export {Flight};
 export {FlightSchedule};
 export {Passanger};

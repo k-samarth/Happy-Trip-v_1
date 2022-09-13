@@ -120,19 +120,20 @@
     <div class="row align-items-start">
 
 
-      <div class="col-sm-12" style="float: left;">
-        <div class="col-sm-12">
-          <div class="col-sm-2">Airlines</div>
+      <div class="col-sm-12" style="width: 100%; ">
+        <div class="col-sm-12" style="display: flex; justify-content: space-between;">
+          
+          <div class="col-sm-2 alert alert-danger">Airlines</div>
 
-          <div class="col-sm-2">Departure</div>
+          <div class="col-sm-2 alert alert-danger">Departure</div>
 
-          <div class="col-sm-2">Duration</div>
+          <div class="col-sm-2 alert alert-danger" >Duration</div>
 
-          <div class="col-sm-2">Arrival</div>
+          <div class="col-sm-2 alert alert-danger">Arrival</div>
 
-          <div class="col-sm-2">Price</div>
+          <div class="col-sm-2 alert alert-danger">Price</div>
 
-          <div class="col-sm-2">Smart Sort</div>
+          <div class="col-sm-2 alert alert-danger">Smart Sort</div>
         </div>
 
         <br><br>
@@ -140,20 +141,27 @@
           <div class="card-body">
             <div class="col-sm-12">
 
-              <div class="col-sm-2"><img
+              <div class="col-sm-2">
+                <div >
+                <img
                   src="https://th.bing.com/th/id/R.553fd27500a2a1112462dad1c99d93c5?rik=KanUQICRBHD8KA&riu=http%3a%2f%2flogonoid.com%2fimages%2fair-asia-logo.png&ehk=Z54jZu4c%2b6vIJ3bDHLLm5X5SLuSa4CFGIBKZnRLCyJ8%3d&risl=&pid=ImgRaw&r=0"
-                  style="width:50px">Air Asia</div>
+                  style="width:50px" id="flightName"></div>
+                  <div id="flightNumber"></div>
+                </div>
+                  <!-- document.getElementById("bookOne").onclick -->
+      
+              <div class="col-sm-2" id="departTime">11:15</div>
+              
+              <div class="col-sm-2" id="duration">2h 50m </div>
 
-              <div class="col-sm-2">11:15</div>
+              <div class="col-sm-2" id="reachTime">14:05</div>
 
-              <div class="col-sm-2">2h 50m </div>
+              <div class="col-sm-2" id="price"> <b>&#8377;7,685</b></div>
 
-              <div class="col-sm-2">14:05</div>
+              <div class="routes"></div>
 
-              <div class="col-sm-2"> <b>&#8377;7,685</b></div>
-
-              <div class="col-sm-2"><a href="../booking/booking.html"><button type="button" class="btn btn-danger">Book
-                    Now</button></a></div>
+              <div class="col-sm-2"><button type="button" class="btn btn-danger" type="bookOne">Book
+                    Now</button></div>
 
             </div>
           </div>
@@ -162,91 +170,61 @@
           <div class="card-body">
             <div class="col-sm-12">
 
-              <div class="col-sm-2"><img
+              <div class="col-sm-2">
+                <div >
+                <img
                   src="https://th.bing.com/th/id/R.553fd27500a2a1112462dad1c99d93c5?rik=KanUQICRBHD8KA&riu=http%3a%2f%2flogonoid.com%2fimages%2fair-asia-logo.png&ehk=Z54jZu4c%2b6vIJ3bDHLLm5X5SLuSa4CFGIBKZnRLCyJ8%3d&risl=&pid=ImgRaw&r=0"
-                  style="width:50px">Air Asia</div>
+                  style="width:50px" id="flightName"></div>
+                  <div id="flightNumber"></div>
+                </div>
+                  <!-- document.getElementById("bookTwo").onclick -->
+      
+              <div class="col-sm-2" id="departTimeTwo">11:15</div>
+              
+              <div class="col-sm-2" id="durationTwo">2h 50m </div>
 
-              <div class="col-sm-2">11:15</div>
+              <div class="col-sm-2" id="reachTimeTwo">14:05</div>
 
-              <div class="col-sm-2">2h 50m </div>
+              <div class="col-sm-2" id="priceTwo"> <b>&#8377;7,685</b></div>
 
-              <div class="col-sm-2">14:05</div>
+              <div class="routes"></div>
 
-              <div class="col-sm-2"> <b>&#8377;7,685</b></div>
-
-              <div class="col-sm-2"><a href="../booking/booking.html"><button type="button" class="btn btn-danger">Book
-                    Now</button></a></div>
+              <div class="col-sm-2"><button type="button" class="btn btn-danger" type="bookTwo">Book
+                    Now</button></div>
 
             </div>
           </div>
-        </div>
-        <div class="card">
+        </div><div class="card">
           <div class="card-body">
             <div class="col-sm-12">
 
-              <div class="col-sm-2"><img
+              <div class="col-sm-2">
+                <div >
+                <img
                   src="https://th.bing.com/th/id/R.553fd27500a2a1112462dad1c99d93c5?rik=KanUQICRBHD8KA&riu=http%3a%2f%2flogonoid.com%2fimages%2fair-asia-logo.png&ehk=Z54jZu4c%2b6vIJ3bDHLLm5X5SLuSa4CFGIBKZnRLCyJ8%3d&risl=&pid=ImgRaw&r=0"
-                  style="width:50px">Air Asia</div>
+                  style="width:50px" id="flightName"></div>
+                  <div id="flightNumber"></div>
+                </div>
+                  <!-- document.getElementById("bookOne").onclick -->
+      
+              <div class="col-sm-2" id="departTimeThree">11:15</div>
+              
+              <div class="col-sm-2" id="durationThree">2h 50m </div>
 
-              <div class="col-sm-2">11:15</div>
+              <div class="col-sm-2" id="reachTimeThree">14:05</div>
 
-              <div class="col-sm-2">2h 50m </div>
+              <div class="col-sm-2" id="priceThree"> <b>&#8377;7,685</b></div>
 
-              <div class="col-sm-2">14:05</div>
+              <div class="routes"></div>
 
-              <div class="col-sm-2"> <b>&#8377;7,685</b></div>
-
-              <div class="col-sm-2"><a href="../booking/booking.html"><button type="button" class="btn btn-danger">Book
-                    Now</button></a></div>
+              <div class="col-sm-2"><button type="button" class="btn btn-danger" type="bookThree">Book
+                    Now</button></div>
 
             </div>
           </div>
         </div>
-        <div class="card">
-          <div class="card-body">
-            <div class="col-sm-12">
-
-              <div class="col-sm-2"><img
-                  src="https://th.bing.com/th/id/R.553fd27500a2a1112462dad1c99d93c5?rik=KanUQICRBHD8KA&riu=http%3a%2f%2flogonoid.com%2fimages%2fair-asia-logo.png&ehk=Z54jZu4c%2b6vIJ3bDHLLm5X5SLuSa4CFGIBKZnRLCyJ8%3d&risl=&pid=ImgRaw&r=0"
-                  style="width:50px">Air Asia</div>
-
-              <div class="col-sm-2">11:15</div>
-
-              <div class="col-sm-2">2h 50m </div>
-
-              <div class="col-sm-2">14:05</div>
-
-              <div class="col-sm-2"> <b>&#8377;7,685</b></div>
-
-              <div class="col-sm-2"><a href="../booking/booking.html"><button type="button" class="btn btn-danger">Book
-                    Now</button></a></div>
-
-            </div>
-          </div>
-        </div>
-        <div class="card">
-          <div class="card-body">
-            <div class="col-sm-12">
-
-              <div class="col-sm-2"><img
-                  src="https://th.bing.com/th/id/R.553fd27500a2a1112462dad1c99d93c5?rik=KanUQICRBHD8KA&riu=http%3a%2f%2flogonoid.com%2fimages%2fair-asia-logo.png&ehk=Z54jZu4c%2b6vIJ3bDHLLm5X5SLuSa4CFGIBKZnRLCyJ8%3d&risl=&pid=ImgRaw&r=0"
-                  style="width:50px">Air Asia</div>
-
-              <div class="col-sm-2">11:15</div>
-
-              <div class="col-sm-2">2h 50m </div>
-
-              <div class="col-sm-2">14:05</div>
-
-              <div class="col-sm-2"> <b>&#8377;7,685</b></div>
-
-              <div class="col-sm-2"><a href="../booking/booking.html"><button type="button" class="btn btn-danger">Book
-                    Now</button></a></div>
-
-            </div>
-          </div>
-        </div>
-
+        
+        
 </body>
 
 </html>

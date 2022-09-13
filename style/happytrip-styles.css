@@ -167,3 +167,14 @@ float: right;
   font-size: 12px;
   padding: 10px;
 }
+
+.alert-danger{
+  padding: 10px 5px;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+  margin-left: -2%;
+  margin-right: 0%;
+  font-size: 12px;
+  color: black;
+}

@@ -4,6 +4,11 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
     <link
@@ -34,6 +39,7 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"
     />
     <link rel="stylesheet" href="../style/happytrip-styles.css" />
+    <link rel="stylesheet" href="booking.css"/>
     <script type="module" src="/booking/booking.js"></script>
     <script type="module" src="../Models/master.js"></script>
     <title>Document</title>
@@ -161,29 +167,60 @@
           </div>
         </div>
         <div class="col-6">
-          <!-- Display schedule information -->
-          <h3>Flight Schedule</h3>
-          <div class="card data" style="width: 35rem">
-            <ul class="list-group list-group-flush">
-              
-              <li class="list-group-item" id="flight"> Flight: &nbsp;</li>
-              <li class="list-group-item" id="airline">Airline: &nbsp;</li>
-              <li class="list-group-item" id="date">Date: &nbsp;</li>
-              <li class="list-group-item" id="time">Time: &nbsp;</li>
-              <li class="list-group-item" id="duration">Duration: &nbsp;</li>
-              <li class="list-group-item" id="seatsAvailability">Seats Available: &nbsp;</li>
-              <li class="list-group-item" id="fromCity">From City: &nbsp;</li>
-              <li class="list-group-item" id="toCity">To City: &nbsp;</li>
-              <li class="list-group-item" id="routes">Routes: &nbsp;</li>
-              <li class="list-group-item" id="price">Price: &nbsp;</li>
-            </ul>
-          </div>
-        </div>
-        <div class="col-3 ads">
+          <section class="container tickets">
+            <h1>Flight Schedule</h1>
+              <div class="row">
+                <article class="card fl-left">
+                  <section class="sidedate">
+                    <image style="width:80px;"src="https://www.bing.com/th?id=OIP.s_HRA4eB7UDtofnuzNWkjAHaHa&pid=3.1&cb=&w=300&h=300&p=0"></image>
+                  </section>
+                
+                  <section class="card-cont">               
+                    <ul class="list-group list-group-flush" >
+                      <div style="display:flex">
+                        <li class="list-group-item"><b>Flight:</b></li>
+                        <li class="list-group-item" id="flight"></li>
+                        <li class="list-group-item" ><b>Seats Available: </b></li>
+                        <li class="list-group-item" id="seatsAvailability"></li>
+                      </div>
+                      <div style="display:flex">
+                        <li class="list-group-item"><b>Airline:</b></li>
+                        <li class="list-group-item" id="airline"> &nbsp;</li>
+                        <li class="list-group-item"><b>From City:</b></li>
+                        <li class="list-group-item" id="fromCity"></li>
+                    </div>
+                    <div style="display:flex">
+                        <li class="list-group-item"><b>Date: &nbsp;</b></li>
+                        <li class="list-group-item" id="date"></li>
+                        <li class="list-group-item"><b>To City: &nbsp;</b></li>
+                        <li class="list-group-item" id="toCity"></li>
+                      </div>
+                      <div style="display:flex">
+                    
+                        <li class="list-group-item"><b>Time: &nbsp;</b></li>
+                        <li class="list-group-item" id="time"></li>
+                        <li class="list-group-item"><b>Routes: &nbsp;</b></li>
+                        <li class="list-group-item" id="routes"></li>
+                      </div>
+                      <div style="display:flex">
+                        <li class="list-group-item" ><b>Duration &nbsp;</b></li>
+                        <li class="list-group-item" id="duration"></li>
+                        <li class="list-group-item"><b>Price: &nbsp;</b></li> 
+                        <li class="list-group-item" id="price"></li> 
+                      </div>
+                    </ul>
+                 
+    
+                
+                  </section>
+                  </article>
+              </div>
+                </section>
+         </div>
           <!-- Adds -->
-          <div class="card" style="width: 15rem">
-            <img
-              class="card-img-top"
+          <div class="card" style="margin-top:20px;margin-left: 75px;width: 15rem">
+            <img 
+              class="card-img-top" 
               src="https://thumbs.dreamstime.com/b/advertising-word-cloud-business-concept-56936998.jpg"
               alt="Card image cap"
             />
@@ -198,67 +235,116 @@
           </div>
         </div>
       </div>
-    </div>
-
+    </div> 
+    <br>
+    <hr/>
+    
+      <div class="container">
+       
+       <center> <a href="#demo"  style="text-decoration: none;font-size:25px;color:blueviolet" data-toggle="collapse">Add traveller details <i style="margin-left:0px"class="bi bi-airplane"></i></a></center>
+      <br>
+       <hr/>
+        <div style="width:1200px;margin-left:300px"id="demo" class="collapse">
+          <form class="col-5 box-shadow" action="../booking/bookingConfirmation.html" >
+            <h3 style="text-align: center;">Passenger Information</h3>
+            <div class="form-group">
+              <label for="exampleFormControlInput1">Name: </label>
+              <input type="text" class="form-control" id="name" placeholder="Please Enter Your Name" required>
+            </div>
+            <br>
+            <label for="exampleFormControlInput1">Gender: </label>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="gender" id="gender" value="Male">
+                <label class="form-check-label" for="exampleRadios1">
+                  Male
+                </label>
+              </div>
+              
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="gender" id="gender" value="Female">
+                <label class="form-check-label" for="exampleRadios2">
+                  Female
+                </label>
+              </div>
+              
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="gender" id="gender" value="Other">
+                <label class="form-check-label" for="exampleRadios2">
+                  Other
+                </label>
+              </div>
+              <br>
+              <div class="form-group">
+                <label for="exampleFormControlInput1">Date of Birth: </label>
+                <input type="date" class="form-control" id="dob" required>
+              </div>
+              <br>
+              <div class="form-group">
+                <label for="exampleFormControlInput1">Mobile Number: </label>
+                <input type="number" class="form-control" id="mobileNumber" placeholder="Please Enter Your Name" required>
+              </div>
+              <br>
+                <input class="form-check-input" type="checkbox" value="" id="tca" required>
+                <label class="form-check-label" for="defaultCheck1">
+                  I Agree to <a href="#">Terms and Conditions</a>
+                </label>
+                <br><br>
+                 <!-- <button id="bookNow" type="submit" class="btn btn-primary my-1 passanger-submit">Book Ticket</button>  -->
+                 <!-- <div class="w3-container">
+                  <button onclick="document.getElementById('bookNow').style.display='block'" class="btn btn-primary my-1 passanger-submit">Book Ticket</button>
+                  <div id="bookNow" class="w3-modal">
+                  <div class="w3-modal-content">
+                  <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+                    <div >
+                      <div style="background-color: rgb(253, 96, 39); padding-top:100px;height:300px;margin-right: 60px;color: white; font-size: 16px;">
+                      <div style="margin-left:50px; margin-top: 30px;">
+                      <center><h2>Thank You for Booking with Us!</h2></center><br>
+                    
+                      </div>
+                      </div> 
+                      
+                      </div>
+                      </div>
+                    </div>
+                  </div> -->
+                  <div class="w3-container">
+                    <button onclick="document.getElementById('bookNow').style.display='block'" class="btn btn-primary my-1 passanger-submit">Book Now</button>
+                    <div id="bookNow" class="w3-modal">
+                    <div class="w3-modal-content">
+                    <span onclick="document.getElementById('bookNow').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+                      <div >
+                        <div style="text-align:center;height:200px;padding-top:50px;background-color: rgb(253, 96, 39); margin-right: 60px;color: white; font-size: 16px;">
+                        <div style="margin-left:50px; margin-top: 30px;">
+                        <h2>Thank You for Booking with Us!</h2><br>
+                        
+                        </div>
+                      </div>
+                    </div>
+                <!-- Login in form begining -->
+         
+        <!-- login form end -->
+      <br>
+                  
+      
     <!-- Collect passanger info -->
     
     <!-- name, gender, dob, mobileNumber -->
-    <div class="container" >
+    
+    
+    <!--<div class="container" >
         <div class="row align-items-start">
             <div class="col-3">
                 &nbsp;
             </div>
-            
-            <form class="col-5 box-shadow" action="../booking/bookingConfirmation.html" >
-        <h3 style="text-align: center;">Passanger Information</h3>
-        <div class="form-group">
-          <label for="exampleFormControlInput1">Name: </label>
-          <input type="text" class="form-control" id="name" placeholder="Please Enter Your Name">
-        </div>
-        <br>
-        <label for="exampleFormControlInput1">Gender: </label>
-        <div class="form-check">
-            <input class="form-check-input" type="radio" name="gender" id="gender" value="Male">
-            <label class="form-check-label" for="exampleRadios1">
-              Male
-            </label>
-          </div>
-          
-          <div class="form-check">
-            <input class="form-check-input" type="radio" name="gender" id="gender" value="Female">
-            <label class="form-check-label" for="exampleRadios2">
-              Female
-            </label>
-          </div>
-          
-          <div class="form-check">
-            <input class="form-check-input" type="radio" name="gender" id="gender" value="Other">
-            <label class="form-check-label" for="exampleRadios2">
-              Other
-            </label>
-          </div>
-          <br>
-          <div class="form-group">
-            <label for="exampleFormControlInput1">Date of Birth: </label>
-            <input type="date" class="form-control" id="dob">
-          </div>
-          <br>
-          <div class="form-group">
-            <label for="exampleFormControlInput1">Mobile Number: </label>
-            <input type="number" class="form-control" id="mobileNumber" placeholder="Please Enter Your Name">
-          </div>
-          <br>
-            <input class="form-check-input" type="checkbox" value="" id="tca" required>
-            <label class="form-check-label" for="defaultCheck1">
-              I Agree to <a href="#">Terms and Conditions</a>
-            </label>
-            <br><br>
-            <button id="bookNow"type="submit" class="btn btn-primary my-1 passanger-submit">Book Ticket</button>
-            <h1 id="result"></h1>
-        </div>
-      </form>
+            <button type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo">Simple collapsible</button>
+            <div id="demo" class="collapse">
+            -->
+
     </div>
     </div>
+    </div>
+  </hr>
+    
     <!-- Accept Terms and Conditions -->
     <!-- Submit the information -->
     <script type="module" src="../Models/master.js">

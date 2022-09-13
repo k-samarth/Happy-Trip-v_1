@@ -61,4 +61,4 @@ console.log(schedule);
     // 15. Return File Schedule Object Array
     // 16. Return the Flight Schedules Data back to Search Manager
 export {fetchSchedules}
-export {searchForFlight};
+// export {searchForFlight};

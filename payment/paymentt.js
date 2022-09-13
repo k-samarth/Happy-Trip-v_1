@@ -14,8 +14,12 @@ function display1() {
     // }else{
     
     // alert("payment cleared")}
-    if (isNaN(a)){
-        alert("Enter correct Card Owner Name")
+    var regName = /^[a-zA-Z]+ [a-zA-Z]+/;
+    
+    if(!regName.test(a)){
+        alert('Invalid name given.');
+    }else{
+        alert('Valid name given.');
     }
 
     if (isNaN(b)){

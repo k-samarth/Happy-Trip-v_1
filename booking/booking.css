@@ -39,7 +39,7 @@ h1 {
 .card {
     display: table-row;
    width:550px;
-   margin-left: 25px;
+   margin-left: 15px;
     background-color: #fff;
     color: #989898;
     margin-bottom: 10px;
@@ -107,10 +107,13 @@ h1 {
 }
 
 .card-cont {
+
     display: table-cell;
     width: 75%;
     font-size: 85%;
-    padding: 10px 10px 30px 50px
+    padding:  10px 30px 30px 50px;
+  
+   
 }
 
 .card-cont h3 {
@@ -183,4 +186,8 @@ h1 {
     .card-cont .even-info {
         font-size: 75%
     }
+}
+li{
+    width:100px;
+    border:none;
 }

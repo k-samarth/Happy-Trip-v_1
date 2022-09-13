@@ -14,6 +14,8 @@
 
 // Imports
 // import { SearchManager } from "./searchmanager";
+// import {searchInfo} from '../Models/searchInfo.js';
+import { fetchCity } from '../search/searchManager.js';
 
 // Configuration for Search
 var oneWayDefaultDirection = true;
@@ -43,25 +45,13 @@ btn.addEventListener("click",validateFields);
 
 // Initializing Search
 function init(){
-    // 1. Have one way preselected
     setDefaultValueTravelDirection(oneWayDefaultDirection);
-    
-    // 2. Load Cities
-    fetchAirport();
-    
-    // 3. Get Number of Adults
-    fetchAirportTo();
-    // 4. Get Number of Children
-    
-    // 5. Get Number of Infants
-    
-    // 6. Get Flight Class
-    
-    // 7. Get Airlines for preference
-    
-    // 8. Enable date range and criteria for search
-    
-    // Set Min Date
+    var cityList=[];
+    cityList = fetchCity();
+    for(let i in cityList){
+        fromCity
+    }
+    // fetchAirportTo();
     setMinDate();
 };
 // Set default value for travel direction
@@ -91,39 +81,7 @@ function assignCities(cities){
     
 }
 
-// Using Async Await for API call for Airport Dropdown
-async function fetchAirport() {
-    console.log("Async Call 1")
-    const response = await fetch(
-        '../service/airports.json',
-        );
-        const data = await response.json(); // Extracting data as a JSON Object from the response
-        console.log("Await data display 1");
-        for(let i in data.airports){
-            var x = document.getElementById("fromCity");
-            var option = document.createElement("option")
-            option.text = data.airports[i].IATA_code+" : "+ data.airports[i].airport_name+", "+ data.airports[i].city_name;
-            x.add(option);
-        }
-    }
-    
-    // Using Async Await for API call for Airport Dropdown
-    async function fetchAirportTo() {
-        console.log("Async Call 2")
-        const response = await fetch(
-            '../service/airports.json',
-            );
-            const data = await response.json(); // Extracting data as a JSON Object from the response
-            console.log("Await data display 2");
-            for(let i in data.airports){
-                var x = document.getElementById("toCity");
-                var option = document.createElement("option")
-                option.text = data.airports[i].IATA_code+" : "+ data.airports[i].airport_name+", "+ data.airports[i].city_name;
-                x.add(option);
-            }
-        }
-        console.log("Outside Async Await");
-        
+
         function setMinDate(){
             departDate.min = new Date().getFullYear() + "-" +  +"0"+parseInt(new Date().getMonth() + 1 ) + "-" + new Date().getDate();
         }
@@ -164,7 +122,7 @@ async function fetchAirport() {
             {
                 console.log("In Sucess"); 
                 alert("Success");
-                document.getElementById("SearchForm").action = "../search/searchresults.html";
+                // document.getElementById("SearchForm").action = "../search/searchresults.html";
             }
         }
         

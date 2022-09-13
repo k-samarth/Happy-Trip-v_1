@@ -3,7 +3,6 @@
 // 2. Attach Function Dynamically to Button Object
 // 3. Event Listners
 
-import { SearchManager } from "./searchmanager";
 
 // Deliverable
 // 1. It should Run.
@@ -13,12 +12,39 @@ import { SearchManager } from "./searchmanager";
 // 5. Lovely, Beautiful and Professional UI.
 // 6. Agenda, Welcome, Problem, Solution, Key highlights, best practices.
 
+// Imports
+import { width } from "@mui/system";
+import { SearchManager } from "./searchmanager";
+
 // Configuration for Search
 var oneWayDefaultDirection = true;
 var numberOfAdults = 9;
 var numberOfChildren = 9;
 var numberOfInfants = 5;
 var searchManager = new SearchManager();
+
+// Variables for Program
+var OneWay = document.getElementById("OneWay");
+var fromCity = document.getElementById("fromCity");
+var swapBtn = document.getElementById('swap');
+var toCity = document.getElementById("toCity");
+var departDate = document.getElementById("dob");
+var arriveOn = document.querySelector(".arriveOn");
+var arriveOn1 = document.querySelector(".arriveOn1");
+var choice = document.getElementById("Class");
+var airline = document.getElementById("airline");
+var btn = document.getElementById('search');
+
+// Event Listners
+window.onload = init();
+window.onload = fetchAirport();
+window.onload = fetchAirportTo();
+window.onload = setMinDate();
+swapBtn.addEventListener("click", swapCity);
+arriveOn.addEventListener("click", enableArriveOn);
+arriveOn1.addEventListener("click", disableArriveOn);
+btn.addEventListener("click",validateFields);
+
 
 // Initializing Search
 function init(){
@@ -39,10 +65,14 @@ function init(){
     // 7. Get Airlines for preference
 
     // 8. Enable date range and criteria for search
+
+    // Set Min Date
+    setMinDate();
 };
 // Set default value for travel direction
 function setDefaultValueTravelDirection(defaultValue){
     // Access the radio button control and make it checked
+    OneWay.checked=defaultValue;
 }
 
 // To Load Cities from the Database in the control for user to select
@@ -66,84 +96,144 @@ function assignCities(cities){
     
 }
 
-
-
-const swapBtn = document.getElementById('swap')
-
-swapBtn.addEventListener("click", function (e) {
-
-    e.preventDefault();
-
-    var tmp = document.getElementById("fromCity").value;
-
-document.getElementById("fromCity").value = document.getElementById("toCity").value;
-
-document.getElementById("toCity").value = tmp;
-
-})
-var btn=document.getElementById('search');
-
-document.getElementById("dob").min = new Date().getFullYear() + "-" +  +"0"+parseInt(new Date().getMonth() + 1 ) + "-" + new Date().getDate();
-btn.onclick=function()
-    
-{
-
-var flag=0;
-var from=document.getElementById("fromCity");
-var to=document.getElementById("toCity");
-var dob=document.getElementById("dob");
-var oneWay=document.getElementById("OneWay");
-if(from.value==to.value)
-{
-    alert("Enter a valid city");
-    flag=1;
-    return;
-}
-var choice=document.getElementById("Class");
-if(choice.value=="")
-{
-    flag=1;
-    return;
-}
-var airline=document.getElementById("airline");
-if(airline.value=="" )
-{
-    flag=1;
-    return;
-}
-if(from.value==0 )
-{
-    flag=1;
-    return;
-}
-if(getOption())
-{
-    flag=1;
-    return;
-}
-if(!flag )
-{
-    alert("success");
-}
-
-}
-
 // Using Async Await for API call for Airport Dropdown
 async function fetchAirport() {
     console.log("Async Call 1")
+    const response = await fetch(
+        '../service/airports.json',
+        );
+        const data = await response.json(); // Extracting data as a JSON Object from the response
+        console.log("Await data display 1");
+        for(let i in data.airports){
+            var x = document.getElementById("fromCity");
+            var option = document.createElement("option")
+        option.text = data.airports[i].IATA_code+" : "+ data.airports[i].airport_name+", "+ data.airports[i].city_name;
+        x.add(option);
+    }
+}
+
+// Using Async Await for API call for Airport Dropdown
+async function fetchAirportTo() {
+    console.log("Async Call 2")
 	const response = await fetch(
-		'../service/airports.json',
-	);
-	const data = await response.json(); // Extracting data as a JSON Object from the response
-    console.log("Await data display 1");
+        '../service/airports.json',
+        );
+        const data = await response.json(); // Extracting data as a JSON Object from the response
+    console.log("Await data display 2");
     for(let i in data.airports){
-        var x = document.getElementById("fromCity");
+        var x = document.getElementById("toCity");
         var option = document.createElement("option")
         option.text = data.airports[i].IATA_code+" : "+ data.airports[i].airport_name+", "+ data.airports[i].city_name;
         x.add(option);
     }
 }
-fetchAirport();
+console.log("Outside Async Await");
+
+function setMinDate(){
+    departDate.min = new Date().getFullYear() + "-" +  +"0"+parseInt(new Date().getMonth() + 1 ) + "-" + new Date().getDate();
+}
+
+function swapCity () {
+    e.preventDefault();
+    fromCity.value;
+    fromCity.value = toCity.value;
+    toCity.value = fromCity;
+};
+
+
+function validateFields() {
+    var flag=0;
+    if(checkSameCity()){
+        return;
+    }
+    if(emptyClass())
+    {
+        return;
+    }
+    if(emptyAirline())
+    {
+        return;
+    }
+    if(emptyFromCity()){
+        return;
+    }
+    if(getOption())
+    {
+        return;
+    }
+    alert("Success");
+}
+
+function checkSameCity(){
+    if(fromCity.value==toCity.value){
+        alert("Enter a valid city");
+        return true;
+    }
+    return false;
+}
+
+function emptyClass(){
+    if(choice.value==""){
+        alert("Enter a valid Class of Seat");
+        return true;
+    }
+    return false;
+}
+
+function emptyAirline(){
+    if(airline.value=="" )
+    {
+        alert("Enter a valid Airline");
+        return true;
+    }
+    return false;
+}
+
+function emptyFromCity(){
+    if(fromCity.value==0 )
+    {
+        alert("Enter a valid FromCity");
+        return true;
+    }
+    return false;
+}
+
+function getOption() {
+    var selectElement1 = document.querySelector('#Adults');
+    var output1 = selectElement1.value;
+    var selectElement2 = document.querySelector('#Children');
+    var output2 = selectElement2.value;
+    var selectElement3 = document.querySelector('#Infants');
+    var output3 = selectElement3.value;
+    var total = parseInt(output1)+parseInt(output2)+parseInt(output3);
+    console.log(total);
+    if(total>=10)
+    {
+        console.log(total);
+        alert("You can only book maximum 9 ticket at once!!")
+        return true;
+    }
+    if(output1<output3)
+    {
+        alert("You can only book maximum 9 ticket at once!!")
+        return true;
+    }
+    return false;
+}
+
+function enableArriveOn()
+{
+    document.getElementById("disable").innerHTML=`<label for="exampleFormControlInput1" id="arriveOn">Return on </label>
+    <input type="date" class="form-control" id="dob1">`;
+    document.getElementById("dob1").min = new Date().getFullYear() + "-" +  +"0"+parseInt(new Date().getMonth() + 1 ) + "-" + new Date().getDate();
+
+}
+
+function disableArriveOn()
+{
+    document.getElementById("disable").innerHTML="";
+}
+
 // function fetchAirport()
 // {
 //     console.log("Fetch Airport Here");
@@ -168,23 +258,8 @@ fetchAirport();
 // }
 // fetchAirport()
 
-// Using Async Await for API call for Airport Dropdown
-async function fetchAirportTo() {
-    console.log("Async Call 2")
-	const response = await fetch(
-		'../service/airports.json',
-	);
-	const data = await response.json(); // Extracting data as a JSON Object from the response
-    console.log("Await data display 2");
-    for(let i in data.airports){
-        var x = document.getElementById("toCity");
-        var option = document.createElement("option")
-        option.text = data.airports[i].IATA_code+" : "+ data.airports[i].airport_name+", "+ data.airports[i].city_name;
-        x.add(option);
-    }
-}
-fetchAirportTo();
-console.log("Outside Async Await");
+
+
 // function fetchAirportTo()
 // {
 //     // console.log("Fetch Airport Here");
@@ -209,47 +284,11 @@ console.log("Outside Async Await");
 // fetchAirportTo()
 
 // Disable The Arrive On for Round Trip
-var arriveOn1 = document.querySelector(".arriveOn1")
-arriveOn1.addEventListener("click", disableArriveOn);
-function disableArriveOn()
-{
-    document.getElementById("disable").innerHTML="";
-}
 
 // Enable The Arrive On for One Way
-var arriveOn = document.querySelector(".arriveOn")
-arriveOn.addEventListener("click", enableArriveOn);
-function enableArriveOn()
-{
-    document.getElementById("disable").innerHTML=`<label for="exampleFormControlInput1" id="arriveOn">Return on </label>
-    <input type="date" class="form-control" id="dob1">`;
-    document.getElementById("dob1").min = new Date().getFullYear() + "-" +  +"0"+parseInt(new Date().getMonth() + 1 ) + "-" + new Date().getDate();
-
-}
 
 
-function getOption() {
-    var selectElement1 = document.querySelector('#Adults');
-    var output1 = selectElement1.value;
-    var selectElement2 = document.querySelector('#Children');
-    var output2 = selectElement2.value;
-    var selectElement3 = document.querySelector('#Infants');
-    var output3 = selectElement3.value;
-    var total = parseInt(output1)+parseInt(output2)+parseInt(output3);
-    console.log(total);
-    if(total>=10)
-    {
-        console.log(total);
-        alert("You can only book maximum 9 ticket at once!!")
-        return true;
-    }
-    if(output1<output3)
-    {
-        alert("You can only book maximum 9 ticket at once!!")
-        return true;
-    }
-    return false;
-}
+
 // import {SearchInfo} from '../Models/' 
 // function Search()
 // {

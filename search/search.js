@@ -137,59 +137,69 @@ async function fetchAirport() {
         
         var flag = 0;
         function validateFields() {
-            if(checkSameCity()==1){
+            if(checkSameCity()){
+                flag=1;
                 return false;
             }
-            if(emptyClass()==1)
+            if(emptyClass())
             {
+                flag=1;
                 return false;
             }
-            if(emptyAirline()==1)
+            if(emptyAirline())
             {
+                flag=1;
                 return false;
             }
-            if(emptyFromCity()==1){
+            if(emptyFromCity()){
+                flag=1;
                 return false;
             }
-            if(getOption()==1)
+            if(getOption())
             {
+                flag=1;
                 return false;
             }
-            alert("Success");
+            if(!flag)
+            {
+                console.log("In Sucess"); 
+                alert("Success");
+                document.getElementById("SearchForm").action = "../search/searchresults.html";
+            }
         }
         
         function checkSameCity(){
             if(fromCity.value==toCity.value){
                 alert("Enter a valid city");
-                return 1;
+                return true;
             }
-            return 0;
+            return false;
         }
         
         function emptyClass(){
             if(choice.value==""){
                 alert("Enter a valid Class of Seat");
-                return 0;
+                return true;
             }
-            return 1;
+            return false;
         }
         
         function emptyAirline(){
             if(airline.value=="" )
             {
                 alert("Enter a valid Airline");
-                return 0;
+                return true;
             }
-            return 1;
+            return false;
         }
         
         function emptyFromCity(){
             if(fromCity.value==0 )
             {
                 alert("Enter a valid FromCity");
-                return 0;
+                return true;
             }
-            return 1;
+            return false;
         }
         
         function getOption() {
@@ -205,14 +215,14 @@ async function fetchAirport() {
             {
                 console.log(total);
                 alert("You can only book maximum 9 ticket at once!!")
-                return 0;
+                return true;
             }
             if(output1<output3)
             {
                 alert("Every infant should have an Adult to look after!!")
-                return 0;
+                return true;
             }
-            return 1;
+            return false;
         }
         
         function enableArriveOn()

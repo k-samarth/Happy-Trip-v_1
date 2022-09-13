@@ -43,12 +43,12 @@ arriveOn.addEventListener("click", enableArriveOn);
 arriveOn1.addEventListener("click", disableArriveOn);
 btn.addEventListener("click",validateFields);
 
-
+var cityList=[];
 // Initializing Search
 function init(){
     setDefaultValueTravelDirection(oneWayDefaultDirection);
-    var cityList=[];
-    cityList = fetchCity();
+    fetchCity();
+    console.log("cityList");
     for(let i in cityList){
         option.text = i;
         fromCity.add(option);
@@ -181,7 +181,13 @@ function setDefaultValueTravelDirection(defaultValue){
         {
             document.getElementById("disable").innerHTML="";
         }
+
+        // Helper Function
+        function receiveManager(opt = []){
+            cityList = opt;
+        }
         
+        export { receiveManager };
         // function fetchAirport()
         // {
             //     console.log("Fetch Airport Here");
@@ -313,3 +319,4 @@ function setDefaultValueTravelDirection(defaultValue){
         //   addTodo();
 
 // var searchManager = new SearchManager();
+

@@ -13,7 +13,6 @@
 // 6. Agenda, Welcome, Problem, Solution, Key highlights, best practices.
 
 // Imports
-import { width } from "@mui/system";
 import { SearchManager } from "./searchmanager";
 
 // Configuration for Search

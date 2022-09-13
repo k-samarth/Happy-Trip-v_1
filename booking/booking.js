@@ -45,6 +45,7 @@ document.getElementById("dob").max = new Date().getFullYear() + "-" +  +"0"+pars
 var btn=document.getElementById('bookNow');
 
 btn.onclick=function(){
+    
     let name=document.getElementById("name").value;
     let gender=document.getElementById("gender").value;
     let dob=document.getElementById("dob").value;
@@ -96,7 +97,11 @@ if(!(name.length)>0||!regName.test(name))
   
    if(flag==0)
    {
-       alert("success");
+    alert("success");
+       //document.getElementById("alert1").style.display="block";
+
+      // document.getElementById("demo").action="../booking/bookingConfirmation.html"
+
    }
 
 }

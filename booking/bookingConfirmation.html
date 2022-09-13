@@ -33,6 +33,8 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"
     />
     <link rel="stylesheet" href="../style/happytrip-styles.css" />
+    <script type="module" src="../Models/master.js"></script>
+    <script type="module" src="../booking/bookingConfirmation.js"></script>
     <title>Search Flights</title>
   </head>
   <body>
@@ -126,7 +128,7 @@
             </div>
           </div>
         </div>
-       
+        
         <div style="padding:10px;margin-left:50px;border:solid 3px grey;box-shadow: 10px 10px 5px lightgray;" class="col-md-8 ">
           <h4>Thanks for booking with Cleartrip</h4>
           <p>We have confirmed your booking and emailed you all the details.Your Trip ID 
@@ -151,33 +153,33 @@
               </thead>
               <tbody>
                 <tr>
-                  <td>Transaction ID</td>
-                  <td>434562653167</td>
+                  <td >Transaction ID</td>
+                  <td id="Transaction_id"></td>
                   <td>From</td>
-                  <td>Bangalore</td>
+                  <td id="From"></td>
                   <td>Airline</td>
-                  <td>AirIndia</td>
+                  <td id="Airline"></td>
               
                 </tr>
                 <tr>
                   <td>Flight No & Name </td>
-                  <td>6E50/Indigo</td>
+                  <td id="FlightNoAndName"></td>
                   <td>To</td>
-                  <td>Delhi</td>
+                  <td id="To"></td>
                   <td>Date of journey</td>
-                  <td>19 sep 2022</td>
+                  <td id="Date"></td>
                 </tr>
                 <tr>
                   <td>Schedule Departure</td>
-                  <td>06:45</td>
+                  <td id="Schedule"></td>
                   <td>Boarding Point</td>
-                  <td>bangalore</td>
+                  <td id="BoardingPoint"></td>
                   <td>Date of boarding</td>
-                  <td>19 Sep 2022</td>
+                  <td id="DateofBoarding"></td>
                 </tr>
                 <tr >
                   <td>Duration:</td>
-                  <td colspan="5">4hrs</td>
+                  <td id="Duration" colspan="5"></td>
                 </tr>
               </tbody>
             </table>
@@ -198,12 +200,12 @@
               
                 </tr>
                 <tr>
-                  <td>1</td>
-                  <td>Venkat Swaminathan</td>
-                  <td>28</td>
-                  <td>Male</td>
-                  <td>6A</td>
-                  <td>Confirmed</td>
+                  <td id="s_no"></td>
+                  <td id="name"></td>
+                  <td id="age"></td>
+                  <td id="gender"></td>
+                  <td id="seat_no"></td>
+                  <td id="status"></td>
               
                 </tr>
                 <tr>
@@ -236,21 +238,21 @@
                   <tr>
                     <th rowspan="4">Price details</th>
                     <td>Fare</td>
-                    <th>Rs.1770</th>
+                    <th id="Fare">Rs.</th>
                   </tr>
                   <tr>
                     <td>Airline service fee</td>
-                    <th>Rs.30</th>
+                    <th id="AirlineFee">Rs.</th>
                     
                   </tr>
                   <tr>
                     <td>Cleartrip service fee</td>
-                    <th>Rs.10</th>
+                    <th id="Cleartrip_fee">Rs.</th>
                     
                   </tr>
                   <tr >
                     <td>Total you paid</td>
-                    <th>Rs. 2010</th>
+                    <th id="Total">Rs.</th>
                   </tr>
 
                   <tr>

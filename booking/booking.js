@@ -96,7 +96,7 @@ if(!(name.length)>0||!regName.test(name))
   
    if(flag==0)
    {
-       alert("success")
+       alert("success");
    }
 
 }

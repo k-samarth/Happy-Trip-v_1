@@ -157,3 +157,13 @@ float: right;
   background-color: red;
   border: none;
 }
+
+/* In Search Results */
+
+.btn-dark:disabled{
+  color: black;
+  background-color: white;
+  border: 1px solid rgba(128, 128, 128, 0.479);
+  font-size: 12px;
+  padding: 10px;
+}

@@ -41,7 +41,10 @@ var getCity = [];
 function fetchCity()
 {
     console.log("In Manager");
-    fetchAirport();
+    getCity = fetchAirport();
+    console.log("Sending from Manager");
+    console.log(getCity);
+    return getCity;
 };
 
 function receiveData(city){

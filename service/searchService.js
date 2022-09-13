@@ -1,7 +1,21 @@
+import { City } from "../Models/travel.js";
 import {FlightSchedule} from "../Models/master.js"
 // import { storeSchedule } from "../search/searchmanager.js";
-function searchForFlight(obj)
-{
+var searchService = function (obj){
+
+    this.getCities = function(){
+        // Get data from API
+        var city1 = new City(1,"BLR", "Bangalore");
+        var city2 = new City(1,"DEL", "Delhi");
+        var city3 = new City(1,"MUM", "Mumbai");
+
+        var cities = new Array();
+        cities.push(city1);
+        cities.push(city2);
+        cities.push(city3);
+
+        return cities;
+    };
     // 10. Construct the object to call your API
     var requiredSchedule = [];
     // 11. Call the API

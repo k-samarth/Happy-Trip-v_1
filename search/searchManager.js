@@ -2,19 +2,16 @@ import {searchInfo} from "../Models/searchInfo.js";
 import {searchForFlight} from "../service/searchService.js";
 import {FlightSchedule} from "../Models/master.js";
 import { displaySchedules } from "./searchresults.js";
-// var searchinfo1 = new searchInfo(
-//     direction,
-//     fromCity,
-//     toCity,
-//     fromDate,
-//     toDate,
-//     adults,
-//     children,
-//     infants
-// );
-function SearchManager(searchInfo1)
-{
+
+var searchService = new SearchService();
+
+var SearchManager = function (){
         console.log("Search Manager");
+
+        this.getCities = function(){
+            return searchService.getCities();
+        } 
+        
         // 7. Perform Validation
         console.log(searchInfo1);
         // 8. Import SearchService 

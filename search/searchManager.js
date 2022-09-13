@@ -36,8 +36,10 @@
 
 import { fetchAirport } from "../service/searchService.js";
 
+
 function fetchCity()
 {
+    console.log("In Manager");
     var getCity = [];
     getCity = fetchAirport();
     console.log(getCity);

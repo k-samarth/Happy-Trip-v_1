@@ -34,6 +34,7 @@ var arriveOn1 = document.querySelector(".arriveOn1");
 var choice = document.getElementById("Class");
 var airline = document.getElementById("airline");
 var btn = document.getElementById('search');
+var option = document.createElement("option")
 
 // Event Listners
 window.onload = init();
@@ -49,7 +50,12 @@ function init(){
     var cityList=[];
     cityList = fetchCity();
     for(let i in cityList){
-        fromCity
+        option.text = i;
+        fromCity.add(option);
+    }
+    for(let i in cityList){
+        option.text = i;
+        toCity.add(option);
     }
     // fetchAirportTo();
     setMinDate();
@@ -60,26 +66,6 @@ function setDefaultValueTravelDirection(defaultValue){
     OneWay.checked=defaultValue;
 }
 
-// To Load Cities from the Database in the control for user to select
-function loadCities(){
-    // 1. Get Cities
-    var cities = getCities();
-    
-    // 2. Load Cities inside Control
-    assignCities(cities);
-}
-
-// Get Cities
-function getCities(){
-    // Get Cities from the Manager
-    return searchManager.getCities();
-}
-
-// 
-function assignCities(cities){
-    // Take the array and construct the dropdown
-    
-}
 
 
         function setMinDate(){

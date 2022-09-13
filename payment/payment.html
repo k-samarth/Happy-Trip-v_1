@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <link rel="stylesheet" href="payment.css">
+    <title>Payment Details</title>
+</head>
+<body>
+    <div class="container-fluid px-0" id="bg-div">
+        <div class="row justify-content-center">
+            <div class="col-lg-9 col-12">
+                <div class="card card0">
+                    <div class="d-flex" id="wrapper">
+                        <!-- Sidebar -->
+                        <div class="bg-light border-right" id="sidebar-wrapper">
+                            <div class="sidebar-heading pt-5 pb-4"><strong>PAY WITH</strong></div>
+                            <div class="list-group list-group-flush"> <a data-toggle="tab" id="tab1" class="tabs list-group-item bg-light">
+                                    <div class="list-div my-2">
+                                        <div class="fa fa-home"></div> &nbsp;&nbsp; Bank
+                                    </div>
+                                </a> <a data-toggle="tab" href="#menu2" id="tab2" class="tabs list-group-item active1">
+                                    <div class="list-div my-2">
+                                        <div class="fa fa-credit-card"></div> &nbsp;&nbsp; Card
+                                    </div>
+                                </a> <a data-toggle="tab" href="#menu3" id="tab3" class="tabs list-group-item bg-light">
+                                    <div class="list-div my-2">
+                                        <div class="fa fa-qrcode"></div> &nbsp;&nbsp;&nbsp; Visa QR <span id="new-label">NEW</span>
+                                    </div>
+                                </a> </div>
+                        </div> <!-- Page Content -->
+                        <div id="page-content-wrapper">
+                            <div class="row pt-3" id="border-btm">
+                                <div class="col-4">
+                                     <button class="btn btn-success mt-4 ml-3 mb-3" id="menu-toggle" style="background-color:orange">
+                                        <div class="bar4"></div>
+                                        <div class="bar4"></div>
+                                        <div class="bar4"></div>
+                                    </button> 
+                                </div>
+                                <div class="col-8">
+                                    <div class="row justify-content-right">
+                                        <div class="col-12">
+                                            
+                                        </div>
+                                    </div>
+                                    <div class="row justify-content-right">
+                                        <div class="col-12">
+                                            <p class="mb-0 mr-4 text-right" >Pay <span class="top-highlight"> ₹ 5676</span> </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row justify-content-center">
+                                <div class="text-center" id="test">Pay</div>
+                            </div>
+                            <div class="tab-content">
+                                
+                                <div id="menu2" class="tab-pane in active">
+                                    <div class="row justify-content-center">
+                                        <div class="col-11">
+                                            <div class="form-card">
+                                                <h3 class="mt-0 mb-4 text-center">Enter your card details to pay</h3>
+                                                <form onsubmit="event.preventDefault()">
+                                                    <div class="row">
+                                                        <div class="col-12">
+                                                            <div class="input-group"> <input type="text" id="cr" placeholder="0000000000000000" minlength="16" maxlength="16" required> <label>CARD NUMBER</label> </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-6">
+                                                            <div class="input-group"> <input type="month" name="exp" id="exp" placeholder="MM/YY" required> <label>CARD EXPIRY</label> </div>
+                                                        </div>
+                                                        <div class="col-6">
+                                                            <div class="input-group"> <input type="password" name="cvcpwd" placeholder="&#9679;&#9679;&#9679;" id="cvv" class="placeicon" minlength="3" maxlength="3" required> <label>CVV</label> </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-md-12 " > <input type="submit" style="background-color: orange;" value="Pay ₹ 5676" class="btn btn-success placeicon" onclick="display1()"> </div>
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-md-12">
+                                                          
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="payment.js"></script>
+</body>
+</html>

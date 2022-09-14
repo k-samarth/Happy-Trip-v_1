@@ -9,9 +9,9 @@
 .tickets {
     background-color: rgb(239, 238, 238);
     font-family: arial;
-    width:600px;
+    width:700px;
     margin-top: 20px;
-    height:380px;
+    height:500px;
     margin-right:-5px;
    
 }
@@ -38,7 +38,7 @@ h1 {
 
 .card {
     display: table-row;
-   width:550px;
+   width: 650px;
    margin-left: 15px;
     background-color: #fff;
     color: #989898;

@@ -67,12 +67,12 @@ window.onload = function()
     // }
 
 
-
+    let passanger2 = JSON.parse(localStorage.getItem("passangerData")); 
     var passanger1 = new Passanger(
         "1",
-        "Venkat Swaminathan",
-        "28",
-        "Male",
+        passanger2.name,
+        "22",
+        passanger2.gender,
         "6A",
         "Confirmed",
        
@@ -83,6 +83,8 @@ window.onload = function()
         console.log(key, value);
         document.getElementById(key).innerHTML =document.getElementById(key).textContent+value;
     }
+
+    document.getElementById("title").innerText=`${Booking_details1.fromCity} :: ${Booking_details1.toCity}`;
     // var price_details1 = new PriceDetails(
     //     1200,
     //     30,

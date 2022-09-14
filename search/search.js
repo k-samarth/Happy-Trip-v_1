@@ -68,10 +68,11 @@ function setMinDate() {
 }
 
 function swapCity() {
-  e.preventDefault();
-  fromCity.value;
+  // e.preventDefault();
+  var temp;
+  temp = fromCity.value;
   fromCity.value = toCity.value;
-  toCity.value = fromCity;
+  toCity.value = temp;
 }
 
 var flag = 0;

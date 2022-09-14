@@ -31,7 +31,7 @@ var cities = [];
 function fetchAirport() {
   console.log("Fetch Airport Here");
 
-  fetch("../service/airports.json")
+  fetch("../services/airports.json")
     .then(function (response) {
       // console.log(fetch('flight.json'));
       return response.json();

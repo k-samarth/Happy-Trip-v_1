@@ -34,7 +34,7 @@
 // export {SearchManager};
 // export {storeSchedule};
 
-import { fetchAirport } from "../service/searchService.js";
+import { fetchAirport } from "../services/searchService.js";
 import { receiveManager } from "./search.js";
 
 var getCity = [];

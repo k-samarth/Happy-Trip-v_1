@@ -32,7 +32,7 @@ function init() {
     searching.fromCity,
     searching.toCity,
     "Non-Stop",
-    "₹ 2546"
+    "2546"
   );
   var flightScheduleTwo = new FlightSchedule(
     flightTwo.name,
@@ -44,7 +44,7 @@ function init() {
     searching.fromCity,
     searching.toCity,
     "Non-Stop",
-    "₹ 2374"
+    "2374"
     
   );
   var flightScheduleThree = new FlightSchedule(
@@ -57,7 +57,7 @@ function init() {
     searching.fromCity,
     searching.toCity,
     "Non-Stop",
-    "₹ 2122" 
+    "2122" 
   );
 
 

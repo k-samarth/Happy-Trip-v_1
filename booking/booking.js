@@ -13,7 +13,7 @@
 // importing Schedule class
 
 import { FlightSchedule } from "../Models/master.js";
-
+import {Passanger} from "../Models/master.js"
 
 window.onload = function()
 {
@@ -102,3 +102,6 @@ if(!(name.length)>0||!regName.test(name))
    }
 
 }
+
+
+// For 

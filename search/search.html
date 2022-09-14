@@ -84,7 +84,7 @@
                 </div> 
                 <div style=" margin-left: -30px; padding: 10px 80px 50px 50px;">
                 <h3 style="margin-left:110px; margin-top:30px;">Login</h3> <br>
-                <form action="">
+                <form>
                 <div class="form-group">
                   <label for="uname"><b>Username</b></label>
                   <input class="form-control"; type="text" placeholder="Enter Username" name="uname" required><br>
@@ -171,13 +171,13 @@
           </div>
         </div>
         <!-- Form for Search -->
-        <form class="col-4 box-shadow" onsubmit=""  style="margin-left:10%; width: 35rem" action="../search/searchresults.html">
+        <form class="col-4 box-shadow"  style="margin-left:10%; width: 35rem" id="SearchForm">
           <h3 >Search Flights</h3>
           <h5 style="color: gray">Fly anywhere. Fly everywhere.</h5>
           <br>
           <div class="direction" style="display: flex; justify-content:space-between; width: 80%;">
           <div class="form-check">
-            <input class="form-check-input arriveOn1" type="radio" name="trip" id="OneWay" value="oneway" checked >
+            <input class="form-check-input arriveOn1" type="radio" name="trip" id="OneWay" value="oneway">
             <label class="form-check-label" for="exampleRadios1">
               One Way
             </label>
@@ -287,7 +287,9 @@
             
           </div>
           <br>
-              <input id="search" type="submit" class="btn btn-primary my-1 passanger-submit" value="Search Flights">
+          <div id="parent">
+            <button id="search"  class="btn btn-primary my-1 passanger-submit" value="Search Flights">Search Flights</button>
+          </div>
               <h1 id="result"></h1>
 
               <!-- Coupons -->

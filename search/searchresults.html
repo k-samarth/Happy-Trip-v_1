@@ -105,14 +105,14 @@
 
   <div class="container" style="display:flex; justify-content: space-between;">
     <!-- direction,fromCity,toCity,fromDate,toDate,adults,children,infants -->
-    <input class="btn btn-dark"  type="text" value="Round" id="direction" disabled>
-    <input class="btn btn-dark"  type="text" value="Round" id="fromCity" disabled>
-    <input class="btn btn-dark"  type="text" value="Round" id="toCity" disabled>
-    <input class="btn btn-dark"  type="text" value="Round" id="fromDate" disabled>
+    <input class="btn btn-dark" type="text" value="Round" id="direction" disabled>
+    <input class="btn btn-dark" type="text" value="Round" id="fromCity" disabled>
+    <input class="btn btn-dark" type="text" value="Round" id="toCity" disabled>
+    <input class="btn btn-dark" type="text" value="Round" id="fromDate" disabled>
     <!-- <input type="text" value="Round" id="toDate" disabled> -->
-    <input class="btn btn-dark"  type="text" value="Round" id="adults" disabled>
-    <input class="btn btn-dark"  type="text" value="Round" id="children" disabled>
-    <input class="btn btn-dark"  type="text" value="Round" id="infants" disabled>
+    <input class="btn btn-dark" type="text" value="Round" id="adults" disabled>
+    <input class="btn btn-dark" type="text" value="Round" id="children" disabled>
+    <input class="btn btn-dark" type="text" value="Round" id="infants" disabled>
   </div>
   <br>
   <hr />
@@ -122,12 +122,12 @@
 
       <div class="col-sm-12" style="width: 100%; ">
         <div class="col-sm-12" style="display: flex; justify-content: space-between;">
-          
+
           <div class="col-sm-2 alert alert-danger">Airlines</div>
 
           <div class="col-sm-2 alert alert-danger">Departure</div>
 
-          <div class="col-sm-2 alert alert-danger" >Duration</div>
+          <div class="col-sm-2 alert alert-danger">Duration</div>
 
           <div class="col-sm-2 alert alert-danger">Arrival</div>
 
@@ -142,89 +142,102 @@
             <div class="col-sm-12">
 
               <div class="col-sm-2">
-                <div >
-                <img
-                  src="https://www.goindigo.in/content/dam/indigov2/6e-website/thmbnail.jpg"
-                  style="width:70px; height: 70px; border-radius: 50%;" id="flightName"></div>
-                  <div id="flightNumber"></div>
+                <div>
+                  <img src="https://www.goindigo.in/content/dam/indigov2/6e-website/thmbnail.jpg"
+                    style="width:70px; height: 70px; border-radius: 50%;">
                 </div>
-                  <!-- document.getElementById("bookOne").onclick -->
-      
-              <div class="col-sm-2" id="departTime"></div>
-              
-              <div class="col-sm-2" id="duration"> </div>
+                <div id="flightName"></div>
+              </div>
+              <!-- document.getElementById("bookOne").onclick -->
+              <div class="col-sm-2 elements" style="text-align: center; margin-left: -2.5% ">
+                <div class="elements" id="flightNu"></div>
 
-              <div class="col-sm-2" id="reachTime"></div>
+                <div class=" elements" id="departTime"  ></div>
+              </div>
 
-              <div class="col-sm-2" id="price"> </div>
 
-              <div class="routes"></div>
+              <div class="col-sm-2 elements" id="duration" style="text-align: center; margin-left: 1.5% " > </div>
 
-              <div class="col-sm-2"><button type="button" class="btn btn-danger" id="bookOne">Book
-                    Now</button></div>
+              <div class="col-sm-2 elements" id="reachTime" style="text-align: center; margin-left: 0.5% ">04:00</div>
+
+              <div class="col-sm-2 elements" id="price" style="text-align: center; margin-left: 0.5% "> </div>
+
+              <!-- <div class="col-sm-2 elements" id="routes"></div> -->
+
+              <div class="col-sm-1 elements" ><button type="button"  class="btn btn-danger elements" id="bookOne" style="text-align: center; margin-left: 50%; padding: 20% 40%;">Book
+                  Now</button></div>
 
             </div>
           </div>
         </div>
-        <div class="card">
+        <div class="card" style="font-size: 12px;">
           <div class="card-body">
             <div class="col-sm-12">
 
               <div class="col-sm-2">
-                <div >
-                <img
-                  src="https://pbs.twimg.com/media/B3B6A-7CUAAjarl.jpg"
-                  style="width:70px; border-radius: 50%;" id="flightNameTwo"></div>
-                  <div id="flightNumberTwo"></div>
+                <div>
+                  <img src="https://seeklogo.com/images/V/vistara-logo-C07710BC2B-seeklogo.com.png"
+                    style="width:70px; height: 70px; border-radius: 50%;">
                 </div>
-                  <!-- document.getElementById("bookTwo").onclick -->
-      
-              <div class="col-sm-2" id="departTimeTwo"></div>
-              
-              <div class="col-sm-2" id="durationTwo"> </div>
+                <div id="flightNameTwo"></div>
+              </div>
+              <!-- document.getElementById("bookOne").onclick -->
+              <div class="col-sm-2 elements" style="text-align: center; margin-left: -2.5% ">
+                <div class="elements" id="flightNumberTwo"></div>
 
-              <div class="col-sm-2" id="reachTimeTwo"></div>
+                <div class=" elements" id="departTimeTwo"  ></div>
+              </div>
 
-              <div class="col-sm-2" id="priceTwo"> </div>
 
-              <div class="routes"></div>
+              <div class="col-sm-2 elements" id="durationTwo" style="text-align: center; margin-left: 1.5% " > </div>
 
-              <div class="col-sm-2"><button type="button" class="btn btn-danger" id="bookTwo">Book
-                    Now</button></div>
+              <div class="col-sm-2 elements" id="reachTimeTwo" style="text-align: center; margin-left: 0.5% ">04:10</div>
 
-            </div>
-          </div>
-        </div><div class="card">
-          <div class="card-body">
-            <div class="col-sm-12">
+              <div class="col-sm-2 elements" id="priceTwo" style="text-align: center; margin-left: 0.5% "> </div>
 
-              <div class="col-sm-2">
-                <div >
-                <img
-                  src="https://pbs.twimg.com/profile_images/2203484703/Profile-pic-2_400x400.jpg"
-                  style="width: 70px; border-radius: 50%;" id="flightNameThree"></div>
-                  <div id="flightNumberThree"></div>
-                </div>
-                  <!-- document.getElementById("bookOne").onclick -->
-      
-              <div class="col-sm-2" id="departTimeThree"></div>
-              
-              <div class="col-sm-2" id="durationThree"> </div>
+              <!-- <div class="col-sm-2 elements" id="routes"></div> -->
 
-              <div class="col-sm-2" id="reachTimeThree"></div>
-
-              <div class="col-sm-2" id="priceThree"> </div>
-
-              <div class="routes"></div>
-
-              <div class="col-sm-2"><button type="button" class="btn btn-danger" id="bookThree">Book
-                    Now</button></div>
+              <div class="col-sm-1 elements" ><button type="button"  class="btn btn-danger elements" id="bookTwo" style="text-align: center; margin-left: 50%; padding: 20% 40%;">Book
+                  Now</button></div>
 
             </div>
           </div>
         </div>
-        
-        
+        <div class="card" style="font-size: 12px;">
+          <div class="card-body">
+            <div class="col-sm-12">
+
+              <div class="col-sm-2">
+                <div>
+                  <img src="https://www.goindigo.in/content/dam/indigov2/6e-website/thmbnail.jpg"
+                    style="width:70px; height: 70px; border-radius: 50%;">
+                </div>
+                <div id="flightNameThree"></div>
+              </div>
+              <!-- document.getElementById("bookOne").onclick -->
+              <div class="col-sm-2 elements" style="text-align: center; margin-left: -2.5% ">
+                <div class="elements" id="flightNumberThree"></div>
+
+                <div class=" elements" id="departTimeThree"  ></div>
+              </div>
+
+
+              <div class="col-sm-2 elements" id="durationThree" style="text-align: center; margin-left: 1.5% " > </div>
+
+              <div class="col-sm-2 elements" id="reachTimeThree" style="text-align: center; margin-left: 0.5% ">09:00</div>
+
+              <div class="col-sm-2 elements" id="priceThree" style="text-align: center; margin-left: 0.5% "> </div>
+
+              <!-- <div class="col-sm-2 elements" id="routes"></div> -->
+
+              <div class="col-sm-1 elements" ><button type="button"  class="btn btn-danger elements" id="bookThree" style="text-align: center; margin-left: 50%; padding: 20% 40%;">Book
+                  Now</button></div>
+
+            </div>
+          </div>
+        </div>
+
+
 </body>
 
 </html>

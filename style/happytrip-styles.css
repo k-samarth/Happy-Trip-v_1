@@ -178,3 +178,16 @@ float: right;
   font-size: 12px;
   color: black;
 }
+
+/* Search Results */
+#flightName{
+  font-size: 16px;
+  text-decoration: solid 5px;
+  margin-left: 5%;
+}
+
+.elements{
+  padding-top: 2%;
+  font-size: 16px;
+  text-decoration: solid 5px;
+}

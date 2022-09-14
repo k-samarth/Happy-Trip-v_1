@@ -21,7 +21,7 @@ function init() {
   var flightOne = new Flight(1, "66E3", "IndiGo");
   var flightTwo = new Flight(2, "6F4H", "Vistara");
   var flightThree = new Flight(3, "4CFW", "KingFisher");
-  
+  console.log(flightOne.name);
   var flightScheduleOne = new FlightSchedule(
     flightOne.name,
     " ",
@@ -63,27 +63,30 @@ function init() {
 
 
   console.log(flightScheduleOne);
+//   localStorage.setItem("flighS1",JSON.stringify(flightScheduleOne));
+//   let flightScheduleOne = JSON.parse(localStorage.getItem("flightScheduleOne"));
+console.log(flightScheduleOne.flightNumber)
   document.getElementById("flightName").innerHTML = flightScheduleOne.flight;
-  document.getElementById("flightNumber").innerHTML = flightOne.flightNumber;
-  document.getElementById("departTime").innerHTML = flightScheduleOne.departTime;
+  document.getElementById("flightNu").innerHTML = flightScheduleOne.date;
+  document.getElementById("departTime").innerHTML = flightScheduleOne.time;
   document.getElementById("duration").innerHTML = flightScheduleOne.duration;
-  document.getElementById("reachTime").innerHTML = flightScheduleOne.reachTime;
+  // document.getElementById("reachTime").innerHTML = flightScheduleOne.time+3;
   document.getElementById("price").innerHTML = flightScheduleOne.price;
-//   document.getElementById("routes").innerHTML = flightScheduleOne.routes;
+  // document.getElementById("routes").innerHTML = flightScheduleOne.routes;
 
   document.getElementById("flightNameTwo").innerHTML = flightScheduleTwo.flight;
-  document.getElementById("flightNumberTwo").innerHTML = flightTwo.flightNumber;
-  document.getElementById("departTimeTwo").innerHTML = flightScheduleTwo.departTime;
+  document.getElementById("flightNumberTwo").innerHTML = flightScheduleTwo.date;
+  document.getElementById("departTimeTwo").innerHTML = flightScheduleTwo.time;
   document.getElementById("durationTwo").innerHTML = flightScheduleTwo.duration;
-  document.getElementById("reachTimeTwo").innerHTML = flightScheduleTwo.reachTime;
+  // document.getElementById("reachTimeTwo").innerHTML = flightScheduleTwo.reachTime;
   document.getElementById("priceTwo").innerHTML = flightScheduleTwo.price;
 //   document.getElementById("routesTwo").innerHTML = flightScheduleTwo.routes;
 
   document.getElementById("flightNameThree").innerHTML = flightScheduleThree.flight;
-  document.getElementById("flightNumberThree").innerHTML = flightThree.flightNumber;
-  document.getElementById("departTimeThree").innerHTML = flightScheduleThree.departTime;
+  document.getElementById("flightNumberThree").innerHTML = flightScheduleThree.date;
+  document.getElementById("departTimeThree").innerHTML = flightScheduleThree.time;
   document.getElementById("durationThree").innerHTML = flightScheduleThree.duration;
-  document.getElementById("reachTimeThree").innerHTML = flightScheduleThree.reachTime;
+  // document.getElementById("reachTimeThree").innerHTML = flightScheduleThree.reachTime;
   document.getElementById("priceThree").innerHTML = flightScheduleThree.price;
 //   document.getElementById("routesThree").innerHTML = flightScheduleThree.routes;
 
@@ -108,6 +111,6 @@ function init() {
       "flightScheduleThree",
       JSON.stringify(flightScheduleThree)
     );
-    // window.open("../booking/booking.html");
+    window.open("../booking/booking.html");
   };
 }

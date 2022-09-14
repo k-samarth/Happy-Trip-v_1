@@ -17,19 +17,20 @@ import { FlightSchedule } from "../Models/master.js";
 
 window.onload = function()
 {
-    var indigoFlight = new FlightSchedule(
-        "66E5",
-        "Indigo",
-        "2022-06-03",
-        "3:00 PM",
-        "30 min",
-        "15",
-        "Bangalore",
-        "Delhi",
-        ["Bangalore", "Delhi"],
-        "₹3500",
-    );
-
+    let indigoFlight = JSON.parse(localStorage.getItem("flightScheduleOne"));
+    // var indigoFlight = new FlightSchedule(
+    //     "66E5",
+    //     "Indigo",
+    //     "2022-06-03",
+    //     "3:00 PM",
+    //     "30 min",
+    //     "15",
+    //     "Bangalore",
+    //     "Delhi",
+    //     ["Bangalore", "Delhi"],
+    //     "₹3500",
+    // );
+    console.log(indigoFlight);
     for(let [key,value] of Object.entries(indigoFlight))
     {
         console.log(key, value);

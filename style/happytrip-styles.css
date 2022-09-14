@@ -180,7 +180,7 @@ float: right;
 }
 
 /* Search Results */
-#flightName{
+#flightName,#flightNameTwo,#flightNameThree{
   font-size: 16px;
   text-decoration: solid 5px;
   margin-left: 5%;

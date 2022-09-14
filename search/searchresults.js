@@ -73,6 +73,9 @@ console.log(flightScheduleOne.flightNumber)
   // document.getElementById("reachTime").innerHTML = flightScheduleOne.time+3;
   document.getElementById("price").innerHTML = flightScheduleOne.price;
   // document.getElementById("routes").innerHTML = flightScheduleOne.routes;
+  document.getElementById("fCity").innerHTML = flightScheduleOne.fromCity;
+  document.getElementById("tCity").innerHTML = flightScheduleOne.toCity;
+
 
   document.getElementById("flightNameTwo").innerHTML = flightScheduleTwo.flight;
   document.getElementById("flightNumberTwo").innerHTML = flightScheduleTwo.date;
@@ -81,6 +84,8 @@ console.log(flightScheduleOne.flightNumber)
   // document.getElementById("reachTimeTwo").innerHTML = flightScheduleTwo.reachTime;
   document.getElementById("priceTwo").innerHTML = flightScheduleTwo.price;
 //   document.getElementById("routesTwo").innerHTML = flightScheduleTwo.routes;
+  document.getElementById("fCityTwo").innerHTML = flightScheduleTwo.fromCity;
+  document.getElementById("tCityTwo").innerHTML = flightScheduleTwo.toCity;
 
   document.getElementById("flightNameThree").innerHTML = flightScheduleThree.flight;
   document.getElementById("flightNumberThree").innerHTML = flightScheduleThree.date;
@@ -89,6 +94,8 @@ console.log(flightScheduleOne.flightNumber)
   // document.getElementById("reachTimeThree").innerHTML = flightScheduleThree.reachTime;
   document.getElementById("priceThree").innerHTML = flightScheduleThree.price;
 //   document.getElementById("routesThree").innerHTML = flightScheduleThree.routes;
+  document.getElementById("fCityThree").innerHTML = flightScheduleThree.fromCity;
+  document.getElementById("tCityThree").innerHTML = flightScheduleThree.toCity;
 
   document.getElementById("bookOne").onclick = function () {
     localStorage.setItem(
@@ -100,7 +107,7 @@ console.log(flightScheduleOne.flightNumber)
 
   document.getElementById("bookTwo").onclick = function () {
     localStorage.setItem(
-      "flightScheduleTwo",
+      "flightScheduleOne",
       JSON.stringify(flightScheduleTwo)
     );
     window.open("../booking/booking.html");
@@ -108,7 +115,7 @@ console.log(flightScheduleOne.flightNumber)
 
   document.getElementById("bookThree").onclick = function () {
     localStorage.setItem(
-      "flightScheduleThree",
+      "flightScheduleOne",
       JSON.stringify(flightScheduleThree)
     );
     window.open("../booking/booking.html");

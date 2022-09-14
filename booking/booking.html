@@ -172,49 +172,37 @@
             <h3 style="text-align: center;">Passenger Information</h3>
             <div class="form-group">
               <label for="exampleFormControlInput1">Name: </label>
-              <input type="text" class="form-control" id="name" placeholder="Please Enter Your Name" required>
+              <input type="text" class="form-control" id="name" placeholder="Please Enter Your Name" >
             </div>
             <br>
             <label for="exampleFormControlInput1">Gender: </label>
             <div class="form-check">
-                <input class="form-check-input" type="radio" name="gender" id="gender" value="Male">
-                <label class="form-check-label" for="exampleRadios1">
-                  Male
-                </label>
-              </div>
-              
-              <div class="form-check">
-                <input class="form-check-input" type="radio" name="gender" id="gender" value="Female">
-                <label class="form-check-label" for="exampleRadios2">
-                  Female
-                </label>
-              </div>
-              
-              <div class="form-check">
-                <input class="form-check-input" type="radio" name="gender" id="gender" value="Other">
-                <label class="form-check-label" for="exampleRadios2">
-                  Other
-                </label>
+              <select class="form-select" id="Pgender">
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+                <option value="Other">Other</option>
+              </select>
               </div>
               <br>
               <div class="form-group">
                 <label for="exampleFormControlInput1">Date of Birth: </label>
-                <input type="date" class="form-control" id="dob" required>
+                <input type="date" class="form-control" id="dob" >
               </div>
               <br>
               <div class="form-group">
                 <label for="exampleFormControlInput1">Mobile Number: </label>
-                <input type="number" class="form-control" id="mobileNumber" placeholder="Please Enter Your Name" required>
+                <input type="number" class="form-control" id="mobileNumber" placeholder="Please Enter Your Name" >
               </div>
               <br>
               <div style="margin-left: 30px">
-                <input class="form-check-input" type="checkbox" value="" id="tca" required>
+                <input class="form-check-input" type="checkbox" value="" id="tca" >
                 <label class="form-check-label" for="defaultCheck1">
                   I Agree to <a href="#">Terms and Conditions</a>
                 </label>
                 <br><br>
                </div>
-                 <button id="bookNow" class="btn btn-primary my-1 passanger-submit">Book Ticket</button> 
+               <button id="add" class="btn btn-primary my-1 passanger-submit">Add Passanger</button> 
+               <button id="bookNow" class="btn btn-primary my-1 passanger-submit">Book Ticket</button> 
                  </form>
                  </div>
                  </div>

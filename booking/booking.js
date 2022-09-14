@@ -54,21 +54,21 @@ btn.onclick=function(){
     var flag=0;
     var regName = /[a-z|A-Z]+$/;
 
-    var checker=document.getElementById("tca");
-  {
+    // var checker=document.getElementById("tca");
+  
 
  
-    if (!form.checker.checked || name.length > 0) {
-        alert("Please Indicate That You Accept The Terms And Conditions");
-        form.checker.focus();
-        flag=1;
+    // if (!form.checker.checked || name.length > 0) {
+    //     alert("Please Indicate That You Accept The Terms And Conditions");
+    //     form.checker.focus();
+    //     flag=1;
         
-        return false;
-    }
+    //     return false;
+    // }
    
     
     
-if(!(name.length)>0||!regName.test(name))
+ if(!(name.length)>0||!regName.test(name))
     {
         alert("Please enter valid  name")
         flag=1;
@@ -95,13 +95,20 @@ if(!(name.length)>0||!regName.test(name))
        flag=1;
        return false;
    }
-}
+
    if(flag==0)
    {
-       alert("success")
+        var Pname = document.getElementById("name").value;
+        var Pgender = document.getElementById("Pgender").value;
+        var Pdob = document.getElementById("dob").value;
+        var Pmobile = document.getElementById("mobileNumber").value;
+
+        var passenger1 = new Passanger("", Pname," ", Pgender,Pmobile,Pdob);
+        alert("success")
+       // localStorage.setItem("passangerData",JSON.stringify(passenger1));
+        //alert("success")
    }
 
 }
 
 
-// For 

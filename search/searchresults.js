@@ -71,7 +71,7 @@ console.log(flightScheduleOne.flightNumber)
   document.getElementById("departTime").innerHTML = flightScheduleOne.time;
   document.getElementById("duration").innerHTML = flightScheduleOne.duration;
   // document.getElementById("reachTime").innerHTML = flightScheduleOne.time+3;
-  document.getElementById("price").innerHTML = flightScheduleOne.price;
+  document.getElementById("price").innerHTML += flightScheduleOne.price;
   // document.getElementById("routes").innerHTML = flightScheduleOne.routes;
   document.getElementById("fCity").innerHTML = flightScheduleOne.fromCity;
   document.getElementById("tCity").innerHTML = flightScheduleOne.toCity;
@@ -82,7 +82,7 @@ console.log(flightScheduleOne.flightNumber)
   document.getElementById("departTimeTwo").innerHTML = flightScheduleTwo.time;
   document.getElementById("durationTwo").innerHTML = flightScheduleTwo.duration;
   // document.getElementById("reachTimeTwo").innerHTML = flightScheduleTwo.reachTime;
-  document.getElementById("priceTwo").innerHTML = flightScheduleTwo.price;
+  document.getElementById("priceTwo").innerHTML += flightScheduleTwo.price;
 //   document.getElementById("routesTwo").innerHTML = flightScheduleTwo.routes;
   document.getElementById("fCityTwo").innerHTML = flightScheduleTwo.fromCity;
   document.getElementById("tCityTwo").innerHTML = flightScheduleTwo.toCity;
@@ -92,7 +92,7 @@ console.log(flightScheduleOne.flightNumber)
   document.getElementById("departTimeThree").innerHTML = flightScheduleThree.time;
   document.getElementById("durationThree").innerHTML = flightScheduleThree.duration;
   // document.getElementById("reachTimeThree").innerHTML = flightScheduleThree.reachTime;
-  document.getElementById("priceThree").innerHTML = flightScheduleThree.price;
+  document.getElementById("priceThree").innerHTML += flightScheduleThree.price;
 //   document.getElementById("routesThree").innerHTML = flightScheduleThree.routes;
   document.getElementById("fCityThree").innerHTML = flightScheduleThree.fromCity;
   document.getElementById("tCityThree").innerHTML = flightScheduleThree.toCity;

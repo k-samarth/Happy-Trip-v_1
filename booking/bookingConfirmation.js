@@ -54,10 +54,10 @@ window.onload = function()
     document.getElementById("BoardingPoint").innerHTML = Booking_details1.fromCity;
     document.getElementById("DateofBoarding").innerHTML = Booking_details1.date;
     document.getElementById("Duration").innerHTML = Booking_details1.duration;
-    document.getElementById("Fare").innerHTML = parseInt(Booking_details1.price);
-    document.getElementById("AirlineFee").innerHTML = parseInt(parseInt(Booking_details1.price)*0.1);
-    document.getElementById("Cleartrip_fee").innerHTML = parseInt(parseInt(Booking_details1.price)*0.01);
-    document.getElementById("Total").innerHTML = parseInt(Booking_details1.price)+parseInt(parseInt(Booking_details1.price)*0.1)+parseInt(parseInt(Booking_details1.price)*0.01);
+    document.getElementById("Fare").innerHTML += parseInt(Booking_details1.price);
+    document.getElementById("AirlineFee").innerHTML += parseInt(parseInt(Booking_details1.price)*0.1);
+    document.getElementById("Cleartrip_fee").innerHTML += parseInt(parseInt(Booking_details1.price)*0.01);
+    document.getElementById("Total").innerHTML += parseInt(Booking_details1.price)+parseInt(parseInt(Booking_details1.price)*0.1)+parseInt(parseInt(Booking_details1.price)*0.01);
 
 
     // for(let [key,value] of Object.entries(Booking_details1))

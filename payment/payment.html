@@ -8,6 +8,8 @@
     <link href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css' rel='stylesheet'>
     <link href='https://use.fontawesome.com/releases/v5.8.1/css/all.css' rel='stylesheet'>
     <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+    
+    
     <style>
         ::-webkit-scrollbar {
             width: 8px;
@@ -52,6 +54,7 @@
             font-weight: bold
         }
     </style>
+    
 </head>
 
 <body className='snippet-body'>
@@ -118,7 +121,7 @@
         <!-- For demo purpose -->
         <div class="row mb-4">
             <div class="col-lg-8 mx-auto text-center">
-                <h1 class="display-6"> Payment </h1>
+                <!-- <h1 class="display-6"> Payment </h1> -->
             </div>
         </div> <!-- End -->
         <div class="row">
@@ -163,8 +166,10 @@
                                                 
                                                         <h6>Expiration Date </h6>
                                                     </span></label>
-                                                <div class="input-group"> <input type="month" placeholder="Expiry" name=""
-                                                        class="form-control" minlength="2" maxlength="2" id="month" required>
+                                                <div class="input-group"> 
+                                                    <input type="date" placeholder="month" name=""
+                                                        class="form-control" id="month" required>
+                                                
                                                          <!-- <input type="text"
                                                         placeholder="YYYY" name="" minlength="4" maxlength="4" id="year" class="form-control" required> -->
                                                      </div>
@@ -178,7 +183,7 @@
                                         </div>
                                     </div>
                                     <div class="card-footer"> <button type="button"
-                                            class="subscribe btn btn-primary btn-block shadow-sm" onclick="display1()"> Confirm Payment
+                                            class="subscribe btn btn-primary btn-block shadow-sm" onclick="display1();"  > Confirm Payment
                                         </button>
                                 </form>
                             </div>
@@ -201,16 +206,12 @@
                                     <h6>Select your Bank</h6>
                                 </label> <select class="form-control" id="ccmonth">
                                     <option value="" selected disabled>--Please select your Bank--</option>
-                                    <option>Bank 1</option>
-                                    <option>Bank 2</option>
-                                    <option>Bank 3</option>
-                                    <option>Bank 4</option>
-                                    <option>Bank 5</option>
-                                    <option>Bank 6</option>
-                                    <option>Bank 7</option>
-                                    <option>Bank 8</option>
-                                    <option>Bank 9</option>
-                                    <option>Bank 10</option>
+                                    <option> State Bank of India </option>
+                                    <option>HDFC Bank </option>
+                                    <option>icici Bank</option>
+                                    <option> Axis Bank </option>
+                                    <option> Bank of India </option>
+                                    
                                 </select> </div>
                             <div class="form-group">
                                 <p> <button type="button" class="btn btn-primary "><i

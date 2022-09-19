@@ -1,5 +1,3 @@
-// Configuration for Search
-// Load from Local Storage
 import { Flight } from "../Models/master.js";
 import { FlightSchedule } from "../Models/master.js";
 
@@ -63,8 +61,6 @@ function init() {
 
 
   console.log(flightScheduleOne);
-//   localStorage.setItem("flighS1",JSON.stringify(flightScheduleOne));
-//   let flightScheduleOne = JSON.parse(localStorage.getItem("flightScheduleOne"));
 console.log(flightScheduleOne.flightNumber)
   document.getElementById("flightName").innerHTML = flightScheduleOne.flight;
   document.getElementById("flightNu").innerHTML = flightScheduleOne.date;

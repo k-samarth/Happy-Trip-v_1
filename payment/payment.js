@@ -19,15 +19,7 @@ function display1() {
         alert("Enter correct card no.")
     }else if(b.length!=16){
         alert(" Card number should be 16 digits only")
-    }
-
-    // if (isNaN(c)){
-    //     alert("Enter correct month.")
-    // }else if(c.length!=2){
-    //     alert(" month length is wrong ")
-    // }
-
-   
+    } 
 
     if (isNaN(e)){
         alert("Enter correct cvv.")

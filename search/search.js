@@ -1,18 +1,3 @@
-// Implement
-// 1. Hardcoded Search
-// 2. Attach Function Dynamically to Button Object
-// 3. Event Listners
-
-// Deliverable
-// 1. It should Run.
-// 2. Code with Comments.
-// 3. Workflow Rules Testcases in the document and code.
-// 4. Solution -> a. class, b. function object, c. javascript object.
-// 5. Lovely, Beautiful and Professional UI.
-// 6. Agenda, Welcome, Problem, Solution, Key highlights, best practices.
-
-// Imports
-// import { SearchManager } from "./searchmanager";
 import {searchInfo} from '../Models/searchInfo.js';
 import { fetchCity } from "../search/searchManager.js";
 
@@ -68,10 +53,11 @@ function setMinDate() {
 }
 
 function swapCity() {
-  e.preventDefault();
-  fromCity.value;
+  // e.preventDefault();
+  var temp;
+  temp=fromCity.value;
   fromCity.value = toCity.value;
-  toCity.value = fromCity;
+  toCity.value = temp;
 }
 
 var flag = 0;
@@ -98,7 +84,7 @@ function validateFields() {
   }
   if (!flag) {
     console.log("In Sucess");
-    alert("Success");
+    // alert("Success");
 
     // Store in Object
     var checked = document.querySelector('input[type="radio"][name="trip"]:checked').value;
@@ -134,7 +120,7 @@ function validateFields() {
     localStorage.setItem("searchData",JSON.stringify(searching));
     
     // document.getElementById("SearchForm").action = "../search/searchresults.html";
-        window.open("../search/searchresults.html");
+        window.open("../search/success.html");
   }
 }
 
@@ -231,133 +217,7 @@ function receiveManager(opt = []) {
 }
 
 export { receiveManager };
-// function fetchAirport()
-// {
-//     console.log("Fetch Airport Here");
 
-//     fetch('../service/airports.json')
-//             .then(function (response) {
-//                 // console.log(fetch('flight.json'));
-//                 return response.json();
-
-//             })
-//             .then(function (data) {
-//                 for(let i in data.airports){
-//                     var x = document.getElementById("fromCity");
-//                     var option = document.createElement("option")
-//                     option.text = data.airports[i].IATA_code+" : "+ data.airports[i].airport_name+", "+ data.airports[i].city_name;
-//                     x.add(option);
-//                 }
-//             })
-//             .catch(function (err) {
-//                 console.log('error: ' + err);
-//             });
-// }
-// fetchAirport()
-
-// function fetchAirportTo()
-// {
-//     // console.log("Fetch Airport Here");
-//     fetch('../service/airports.json')
-//             .then(function (response) {
-//                 // console.log(fetch('flight.json'));
-//                 return response.json();
-
-//             })
-//             .then(function (data) {
-//                 for(let i in data.airports){
-//                     var x = document.getElementById("toCity");
-//                     var option = document.createElement("option")
-//                     option.text = data.airports[i].IATA_code+" : "+ data.airports[i].airport_name+", "+ data.airports[i].city_name;
-//                     x.add(option);
-//                 }
-//             })
-//             .catch(function (err) {
-//                 console.log('error: ' + err);
-//             });
-// }
-// fetchAirportTo()
-
-// Disable The Arrive On for Round Trip
-
-// Enable The Arrive On for One Way
-
-// import {SearchInfo} from '../Models/'
-// function Search()
-// {
-//     // 1. Validate data Entered in the form
-//     // 2. Implement Rules in Seperate Functions
-//     // 3. If Valid: Import Classes Needed
-
-//     // 4. Create an Model for SearchInfo
-//     // 5. Fill information for SearchInfo
-//     // 6. Call the SearchManager -> Searchfunction
-//     // 19. Upon success redirect to Search Results.
-//     validateSearchInfo();
-// }
-// function validateSearchInfo(searchInfo)
-// {
-//     validateLocation();
-
-//     validateTravelDates();
-
-//     validateNumberofTickets();
-// }
-// function validateLocation()
-// {
-
-// }
-// function validateTravelDates()
-// {
-
-// }
-// function validateNumberofTickets()
-// {
-
-// }
-
-// Function to add Airport
-
-// Axios Not Working!!!
-
-// function getTodos() {
-//     // axios({
-//     //   method: 'get',
-//     //   url: 'https://jsonplaceholder.typicode.com/todos',
-//     //   params: {
-//     //     _limit: 5
-//     //   }
-//     // })
-//     //   .then(res => showOutput(res))
-//     //   .catch(err => console.error(err));
-//     console.log("Inside Axios");
-//     axios
-//       .get('../service/flights.json', {
-//         timeout: 5000
-//       })
-//       .then(res => console.log(res))
-//       .then(data => console.log(data))
-//       .catch(err => console.error(err));
-//   }
-
-//   getTodos();
-
-//   function addTodo() {
-//     console.log("Function post")
-//     axios
-//       .post('../service/flights.json', {
-//         "id":5,
-//         "number":"6ESS9",
-//         "name": "AI6234",
-//         "flightCapacity": 60,
-//         "airline": "AirIndia"
-//       })
-//       .then(res => showOutput(res))
-//       .catch(err => console.error(err));
-//   }
-//   addTodo();
-
-// var searchManager = new SearchManager();
 
 
 

@@ -26,28 +26,6 @@ class Airline {
   }
 }
 
-// Object creation without class
-// var airline = {
-//     id: 0,
-//     name: "Indigo",
-//     logo: "https://1000logos.net/wp-content/uploads/2021/07/IndiGo-Logo.png",
-//     code: "IND123"
-// };
-
-// Function class
-// function Airline(id,name,logo,code)
-// {
-//     var legalName = null; //This is a local variable that is not attached to object
-//     this.id= id;
-//     this.name = name;
-//     this.logo = logo;
-//     this.code = code;
-//     this.getRoutes = function(){
-//         console.log("These are the Routes for Airline");
-//         var routeVar; //This is also local a local variable to the function
-//     }
-// };
-
 class FlightSchedule {
   constructor(
     flight,

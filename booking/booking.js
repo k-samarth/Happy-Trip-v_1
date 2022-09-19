@@ -1,9 +1,17 @@
 import { FlightSchedule } from "../Models/master.js";
 import {Passanger} from "../Models/master.js"
 
+var name=document.getElementById("name").value;
+    var gender=document.getElementById("gender").value;
+    var dob=document.getElementById("dob").value;
+    var mobileNumber=document.getElementById("mobileNumber").value;
+    var phone=/[0-9]{10}$/;
+    var flag=0;
+    var regName = /[a-z|A-Z]+$/;
+
 window.onload = function()
 {
-    let indigoFlight = JSON.parse(localStorage.getItem("flightScheduleOne"));
+    var indigoFlight = JSON.parse(localStorage.getItem("flightScheduleOne"));
 
     console.log(indigoFlight);
     for(let [key,value] of Object.entries(indigoFlight))
@@ -14,68 +22,88 @@ window.onload = function()
 }
 
 var button = document.getElementById("bookNow");
+var i=1;
+var passangers = [];
 button.onclick = function(){
-    //  ValidateData();
-    let name=document.getElementById("name").value;
-    let gender=document.getElementById("gender").value;
-    let dob=document.getElementById("dob").value;
-    let mobileNumber=document.getElementById("mobileNumber").value;
+    // if(ValidateData()){
+    var search = JSON.parse(localStorage.getItem("searchData"));
+    var numberPassangers = parseInt(search.adults) + parseInt(search.infants) + parseInt(search.children);
+    while(i<=numberPassangers){
+        var name=document.getElementById("name").value;
+        var gender=document.getElementById("gender").value;
+        var dob=document.getElementById("dob").value;
+        var mobileNumber=document.getElementById("mobileNumber").value;
 
-    var passanger = new Passanger("1", name, 21, gender,dob,mobileNumber);
-    localStorage.setItem("passangerData",JSON.stringify(passanger));
+        var passanger = new Passanger(i, name, 21, gender,dob,mobileNumber);
+        // localStorage.setItem(`passangerData${i}`,JSON.stringify(passanger));
+        passangers.push(passanger);
+        
+        if(i<numberPassangers)
+        {document.getElementById("numberEntered").innerText=`Passanger ${name} has been added`;
+        document.getElementById("name").value = " ";
+        document.getElementById("gender").value = " ";
+        document.getElementById("dob").value = " ";
+        document.getElementById("mobileNumber").value = " ";}
+        i++;
+        return false;
+    };
+        window.open("../payment/payment.html");
+        localStorage.setItem("passangerData",JSON.stringify(passangers));
+    // }
+
 }
-// // name, gender, dob, mobileNumber
+
 
 document.getElementById("dob").max = new Date().getFullYear() + "-" +  +"0"+parseInt(new Date().getMonth() + 1 ) + "-" + new Date().getDate();
 
-
-// var btn=document.getElementById('bookNow');
-
-// btn.onclick=
 function ValidateData(){
-    let name=document.getElementById("name").value;
-    let gender=document.getElementById("gender").value;
-    let dob=document.getElementById("dob").value;
-    let mobileNumber=document.getElementById("mobileNumber").value;
-    var phone=/[0-9]{10}$/;
-    var flag=0;
-    var regName = /[a-z|A-Z]+$/;
+    if(checkBoxCheck() && checkName() && checkGender() && dobCheck() && mobileCheck()){
+        return true;
+    }
+    return false;
+}
 
+function checkBoxCheck(){
     if (!form.checker.checked || name.length > 0) {
         alert("Please Indicate That You Accept The Terms And Conditions");
-        form.checker.focus();
-        flag=1;
-        
+        form.checker.focus();        
         return false;
     }
-    
-    else if(!(name.length)>0||!regName.test(name))
+    return true;
+}
+
+function checkName(){
+    if(!(name.length)>0||!regName.test(name))
     {
         alert("Please enter valid  name")
-        flag=1;
         return false;
-
     }
-    
-    else if(!(gender.length)>0)
+    return true;
+}
+
+function checkGender(){
+    if(!(gender.length)>0)
     {
        alert("Please enter the gender ")
-       flag=1;
        return false;
     }
+    return true;
+}
 
-    else if(!(dob.length)>0)
+function dobCheck(){
+    if(!(dob.length)>0)
    {
        alert("Please enter the DOB ")
-       flag=1;
        return false;
    }
-    
-   else if(!(mobileNumber.length>0) || isNaN(mobileNumber)||!phone.test(mobileNumber))
+   return true;
+}
+
+function mobileCheck(){
+    if(!(mobileNumber.length>0) || isNaN(mobileNumber)||!phone.test(mobileNumber))
    {
        alert("Please enter the valid mobile number")
        flag=1;
        return false;
    }
-   
 }

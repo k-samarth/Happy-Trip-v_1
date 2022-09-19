@@ -191,3 +191,8 @@ float: right;
   font-size: 16px;
   text-decoration: solid 5px;
 }
+
+#numberEntered{
+  color: green;
+  font-size: 12px;
+}

@@ -40,7 +40,7 @@
   <body>
     <!-- Nav Bar -->
    
-      <nav class="navbar navbar-light bg-light col-12">
+      <nav class="navbar navbar-light bg-light col-12 noprint">
         <div class="container-fluid">
           <a class="navbar-brand col-2" href="#" >
             <img
@@ -63,7 +63,13 @@
           </div>
         </div>
       </nav>
- 
+      <ul class="breadcrumb noprint">
+        <li><a href="../search/search.html">/ Search</a></li>
+        <li><a href="../search/searchresults.html">Search Results</a></li>
+        <li><a href="../booking/booking.html">Booking</a></li>
+        <li><a href="../payment/payment.html">Payment</a></li>
+        <li><a href="../booking/bookingConfirmation.html">Booking Confirmation</a></li>
+      </ul>
    
 
 
@@ -75,7 +81,7 @@
 
           <div
             id="sidebarMenu"
-            class="collapse d-lg-block sidebar collapse bg-white"
+            class="collapse d-lg-block sidebar collapse bg-white noprint"
           >
             <div class="position-sticky">
               <div class="list-group list-group-flush mx-3 mt-4">
@@ -129,18 +135,19 @@
           </div>
         </div>
         
-        <div style="padding:10px;margin-left:50px;border:solid 3px grey;box-shadow: 10px 10px 5px lightgray;" class="col-md-8 ">
+        <div id="printContent" style="padding:10px;margin-left:50px;border:solid 3px grey;box-shadow: 10px 10px 5px lightgray;" class="col-md-8 ">
           <h4>Thanks for booking with Cleartrip</h4>
           <p>We have confirmed your booking and emailed you all the details.Your Trip ID 
             is <span id="tripId"><b>12345</b></span>. Please use this in any communication with Cleartrip. 
           </p>
-          <p style=" border-top:2px solid skyblue;border-bottom:2px solid skyblue;background-color:lightblue"><b>Note:&nbsp;</b><u><a href="#"style="color:blue"onclick="printpage()" >Print</a></u> the e-ticket and carry it along with the ID proof mentioned in the ticket when you board the flight.</p>
+          <p style=" border-top:2px solid skyblue;border-bottom:2px solid skyblue;background-color:lightblue"><b>Note:&nbsp;</b><u><a href="#"style="color:blue" onclick="printpage()" >Print</a></u> the e-ticket and carry it along with the ID proof mentioned in the ticket when you board the flight.</p>
           <script>
             function printpage()
             {
             
               window.print();
             }
+
           </script>
           <div class="container">
        
@@ -216,33 +223,6 @@
                 </tr>
                 <tr id="displayer9">
                 </tr>
-                <!-- <tr id="">
-                  <td id="s_no"></td>
-                  <td id="name"></td>
-                  <td id="age"></td>
-                  <td id="gender"></td>
-                  <td id="seat_no"></td>
-                  <td id="status"></td>
-              
-                </tr>
-                <tr>
-                  <td>2</td>
-                  <td>Bindu Swaminathan</td>
-                  <td>25</td>
-                  <td>Female</td>
-                  <td>6B</td>
-                  <td>Confirmed</td>
-              
-                </tr>
-                <tr>
-                  <td>3</td>
-                  <td>Ganesh Swaminathan</td>
-                  <td>9</td>
-                  <td>Male</td>
-                  <td>6C</td>
-                  <td>Confirmed</td>
-              
-                </tr> -->
               </tbody>
               </table>
               <table class="table">
@@ -306,6 +286,6 @@
         
       </div>
     </div>
-    <a href="../search/search.html"><button class="btn-primary" style="padding: 10px 60px; font-size: 18px; margin-left: 55%; margin-top: 2%;">Home</button></a>
+    <a href="../search/search.html"><button class="btn-primary noprint" style="padding: 10px 60px; font-size: 18px; margin-left: 55%; margin-top: 2%;">Home</button></a>
   </body>
 </html>

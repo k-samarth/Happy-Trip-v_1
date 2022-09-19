@@ -196,3 +196,43 @@ float: right;
   color: green;
   font-size: 12px;
 }
+
+#amountToBePaid{
+  color: green;
+}
+
+/* Bread Crumbs */
+ul.breadcrumb {
+  margin-top: 2%;
+  padding: 10px 36px;
+  list-style: none;
+  font-size: 2px;
+  /* background-color: #eee; */
+}
+ul.breadcrumb li {
+  display: inline;
+  font-size: 12px;
+}
+ul.breadcrumb li+li:before {
+  padding: 8px;
+  color: black;
+  content: "/\00a0";
+}
+ul.breadcrumb li a {
+  color: #000000;
+  text-decoration: underline;
+}
+ul.breadcrumb li a:hover {
+  color: #000000;
+  text-decoration: underline;
+}
+
+/* Printing */
+@media print
+{
+.noprint {display:none;}
+body{
+  width: 80%;
+
+}
+}

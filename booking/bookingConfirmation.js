@@ -45,7 +45,7 @@ window.onload = function()
             passanger2[i].name,
             4*(i+3),
             passanger2[i].gender,
-            [i]+'A',
+            [(i+1)*2]+'A',
             "Confirmed",
            
         );

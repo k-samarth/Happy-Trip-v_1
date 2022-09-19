@@ -39,6 +39,12 @@ function display1() {
    
 
 }
+
+    var search = JSON.parse(localStorage.getItem("searchData"));
+    var flight = JSON.parse(localStorage.getItem("flightScheduleOne"));
+    var numberPassangers = parseInt(search.adults) + parseInt(search.infants) + parseInt(search.children);
+    document.getElementById('amountToBePaid').innerText += " ₹ " +parseInt(parseInt(flight.price) * numberPassangers +parseInt(parseInt(flight.price)*0.1) + parseInt(parseInt(flight.price)*0.01));
+    document.getElementById('amountToBePaid').style.color = "green";
 window.onload=setMinDate();
 function setMinDate() {
 
@@ -55,5 +61,4 @@ function setMinDate() {
       "-" +
   
       new Date().getDate();
-  
   }

@@ -9,7 +9,7 @@ var cities = [];
 function fetchAirport() {
   console.log("Fetch Airport Here");
 
-  fetch("../service/airports.json")
+  fetch("https://github.com/k-samarth/Happy-Trip-v_1/blob/old-state/service/flightSchedules.json")
     .then(function (response) {
       // console.log(fetch('flight.json'));
       return response.json();

@@ -36,20 +36,27 @@ window.onload = function()
 
 
     let passanger2 = JSON.parse(localStorage.getItem("passangerData")); 
-    var passanger1 = new Passanger(
-        "1",
-        passanger2.name,
-        "22",
-        passanger2.gender,
-        "6A",
-        "Confirmed",
-       
-    );
-
-    for(let [key,value] of Object.entries(passanger1))
-    {
-        console.log(key, value);
-        document.getElementById(key).innerHTML =document.getElementById(key).textContent+value;
+    var search = JSON.parse(localStorage.getItem("searchData"));
+    var numberPassangers = parseInt(search.adults) + parseInt(search.infants) + parseInt(search.children);
+    var i=0;
+    while(i<numberPassangers){
+        var passanger1 = new Passanger(
+            passanger2[i].s_no,
+            passanger2[i].name,
+            4*(i+3),
+            passanger2[i].gender,
+            [i]+'A',
+            "Confirmed",
+           
+        );
+        var displayer = ['displayer1','displayer2','displayer3', 'displayer4', 'displayer5', 'displayer6', 'displayer7', 'displayer8', 'displayer9'];
+        document.getElementById(displayer[i]).innerHTML=`<td>${passanger1.s_no}</td>
+                                                            <td>${passanger1.name}</td>
+                                                            <td>${passanger1.age}</td>
+                                                            <td>${passanger1.gender}</td>
+                                                            <td>${passanger1.seat_no}</td>
+                                                            <td>${passanger1.status}</td>`;
+        i++;
     }
 
     document.getElementById("title").innerText=`${Booking_details1.fromCity} :: ${Booking_details1.toCity}`;

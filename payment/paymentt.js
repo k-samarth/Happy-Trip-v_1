@@ -11,20 +11,29 @@ function display1() {
     
     if(!regName.test(a)){
         alert('Invalid name given.');
-    }else{
-        alert('Valid name given.');
+    }
+    else if (isNaN(b)){
+        alert("Enter correct card no.")
+    } 
+    else if(b.length!=16){
+        alert(" Card number should be 16 digits only")
     }
 
-    if (isNaN(b)){
-        alert("Enter correct card no.")
-    }else if(b.length!=16){
-        alert(" Card number should be 16 digits only")
-    } 
+    // if (isNaN(c)){
+    //     alert("Enter correct month.")
+    // }else if(c.length!=2){
+    //     alert(" month length is wrong ")
+    // }
 
-    if (isNaN(e)){
+   
+
+    else if (isNaN(e)){
         alert("Enter correct cvv.")
     }else if(e.length!=3){
         alert(" CVV should be 3 digits only ")
+    }
+    else{
+        window.open("../payment/success.html")
     }
 
    
